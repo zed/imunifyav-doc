@@ -33,7 +33,7 @@ module.exports = {
     docsDir: "docs",
 
     translationSource: 'docs.imunify360.com',
-    defaultURL: "/introduction/",
+    defaultURL: "/imunifyav/",
     redirectionMapping: urls,
     sidebarDepth: 2,
     logo: "/logo.svg",
