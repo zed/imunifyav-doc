@@ -31,4 +31,4 @@ workflows:
       - build:
           filters:
             branches:
-              only: test
+              only: dev
