@@ -1,0 +1,130 @@
+/Users/prefer/.virtualenvs/scrapy1/bin/python /Applications/PyCharm.app/Contents/helpers/pydev/pydevd.py --multiproc --qt-support=auto --client 127.0.0.1 --port 55295 --file /Users/prefer/src/tmp/cl-doc-crawler/doc/run.py --folder /Users/prefer/src/imunify360-av/docs --base-url=https://docs.imunifyav.com --start-url=https://docs.imunifyav.com/imunifyavdocs_content.htm
+pydev debugger: process 78986 is connecting
+
+Connected to pydev debugger (build 182.5107.15)
+2019-02-07 14:15:08 [scrapy.utils.log] INFO: Scrapy 1.5.1 started (bot: doc)
+2019-02-07 14:15:08 [scrapy.utils.log] INFO: Versions: lxml 4.2.5.0, libxml2 2.9.8, cssselect 1.0.3, parsel 1.5.0, w3lib 1.19.0, Twisted 18.7.0, Python 3.6.0b4 (v3.6.0b4:18496abdb3d5, Nov 21 2016, 20:44:47) - [GCC 4.2.1 (Apple Inc. build 5666) (dot 3)], pyOpenSSL 18.0.0 (OpenSSL 1.1.0i  14 Aug 2018), cryptography 2.3.1, Platform Darwin-18.2.0-x86_64-i386-64bit
+2019-02-07 14:15:08 [scrapy.crawler] INFO: Overridden settings: {'BOT_NAME': 'doc', 'NEWSPIDER_MODULE': 'doc.spiders', 'ROBOTSTXT_OBEY': True, 'SPIDER_MODULES': ['doc.spiders']}
+2019-02-07 14:15:08 [scrapy.middleware] INFO: Enabled extensions:
+['scrapy.extensions.corestats.CoreStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.memusage.MemoryUsage',
+ 'scrapy.extensions.logstats.LogStats']
+2019-02-07 14:15:08 [scrapy.middleware] INFO: Enabled downloader middlewares:
+['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2019-02-07 14:15:08 [scrapy.middleware] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2019-02-07 14:15:08 [scrapy.middleware] INFO: Enabled item pipelines:
+[]
+2019-02-07 14:15:08 [scrapy.core.engine] INFO: Spider opened
+2019-02-07 14:15:08 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2019-02-07 14:15:08 [scrapy.extensions.telnet] DEBUG: Telnet console listening on 127.0.0.1:6023
+2019-02-07 14:15:09 [scrapy.core.engine] DEBUG: Crawled (404) <GET https://docs.imunifyav.com/robots.txt> (referer: None)
+2019-02-07 14:15:09 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/imunifyavdocs_content.htm> (referer: None)
+2019-02-07 14:15:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/imunifyav.htm> (referer: https://docs.imunifyav.com/imunifyavdocs_content.htm)
+WARNING: Possible broken link - hoster_interface.htm
+WARNING: Possible broken link - end_user_interface.htm
+2019-02-07 14:15:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/installation_guide3.htm> (referer: https://docs.imunifyav.com/imunifyav.htm)
+2019-02-07 14:15:10 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/uninstall.htm> (referer: https://docs.imunifyav.com/installation_guide3.htm)
+2019-02-07 14:15:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/localization.htm> (referer: https://docs.imunifyav.com/uninstall.htm)
+2019-02-07 14:15:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/hoster_interface.htm> (referer: https://docs.imunifyav.com/localization.htm)
+WARNING: Possible broken link - users.htm
+WARNING: Possible broken link - files.htm
+WARNING: Possible broken link - on-demand_scan.htm
+WARNING: Possible broken link - history.htm
+WARNING: Possible broken link - ignore_list.htm
+WARNING: Possible broken link - features_management.htm
+WARNING: Possible broken link - upgrade.htm
+2019-02-07 14:15:11 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/users.htm> (referer: https://docs.imunifyav.com/hoster_interface.htm)
+WARNING: Possible broken link - upgrade.htm
+WARNING: Possible broken link - upgrade.htm
+2019-02-07 14:15:13 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/files.htm> (referer: https://docs.imunifyav.com/users.htm)
+WARNING: Possible broken link - upgrade.htm
+WARNING: Possible broken link - upgrade.htm
+2019-02-07 14:15:14 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/on-demand_scan.htm> (referer: https://docs.imunifyav.com/files.htm)
+WARNING: Possible broken link - files.htm
+2019-02-07 14:15:18 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/history.htm> (referer: https://docs.imunifyav.com/on-demand_scan.htm)
+2019-02-07 14:15:19 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/ignore_list.htm> (referer: https://docs.imunifyav.com/history.htm)
+2019-02-07 14:15:20 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/features_management.htm> (referer: https://docs.imunifyav.com/ignore_list.htm)
+2019-02-07 14:15:22 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/settings.htm> (referer: https://docs.imunifyav.com/features_management.htm)
+2019-02-07 14:15:23 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/upgrade.htm> (referer: https://docs.imunifyav.com/settings.htm)
+2019-02-07 14:15:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/end_user_interface.htm> (referer: https://docs.imunifyav.com/upgrade.htm)
+WARNING: Possible broken link - files2.htm
+WARNING: Possible broken link - history3.htm
+WARNING: Possible broken link - ignore_list2.htm
+2019-02-07 14:15:25 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/files2.htm> (referer: https://docs.imunifyav.com/end_user_interface.htm)
+2019-02-07 14:15:26 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/history3.htm> (referer: https://docs.imunifyav.com/files2.htm)
+2019-02-07 14:15:28 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/ignore_list2.htm> (referer: https://docs.imunifyav.com/history3.htm)
+2019-02-07 14:15:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/imunifyav2.htm> (referer: https://docs.imunifyav.com/ignore_list2.htm)
+WARNING: Possible broken link - hoster_interface2.htm
+WARNING: Possible broken link - end_user_interface2.htm
+2019-02-07 14:15:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/installation_guide4.htm> (referer: https://docs.imunifyav.com/imunifyav2.htm)
+2019-02-07 14:15:29 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/uninstall2.htm> (referer: https://docs.imunifyav.com/installation_guide4.htm)
+2019-02-07 14:15:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/localization2.htm> (referer: https://docs.imunifyav.com/uninstall2.htm)
+2019-02-07 14:15:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/hoster_interface2.htm> (referer: https://docs.imunifyav.com/localization2.htm)
+WARNING: Possible broken link - users2.htm
+WARNING: Possible broken link - files3.htm
+WARNING: Possible broken link - on-demand_scan2.htm
+WARNING: Possible broken link - history2.htm
+WARNING: Possible broken link - ignore_list3.htm
+WARNING: Possible broken link - settings3.htm
+2019-02-07 14:15:30 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/users2.htm> (referer: https://docs.imunifyav.com/hoster_interface2.htm)
+WARNING: Possible broken link - files3.htm
+WARNING: Possible broken link - files3.htm
+2019-02-07 14:15:32 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/files3.htm> (referer: https://docs.imunifyav.com/users2.htm)
+WARNING: Possible broken link - settings3.htm
+2019-02-07 14:15:33 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/on-demand_scan2.htm> (referer: https://docs.imunifyav.com/files3.htm)
+WARNING: Possible broken link - files3.htm
+2019-02-07 14:15:36 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/history2.htm> (referer: https://docs.imunifyav.com/on-demand_scan2.htm)
+2019-02-07 14:15:38 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/ignore_list3.htm> (referer: https://docs.imunifyav.com/history2.htm)
+2019-02-07 14:15:39 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/settings3.htm> (referer: https://docs.imunifyav.com/ignore_list3.htm)
+2019-02-07 14:15:40 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/end_user_interface2.htm> (referer: https://docs.imunifyav.com/settings3.htm)
+WARNING: Possible broken link - files4.htm
+WARNING: Possible broken link - history4.htm
+WARNING: Possible broken link - ignore_list4.htm
+2019-02-07 14:15:41 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/files4.htm> (referer: https://docs.imunifyav.com/end_user_interface2.htm)
+2019-02-07 14:15:42 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/history4.htm> (referer: https://docs.imunifyav.com/files4.htm)
+2019-02-07 14:15:43 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/ignore_list4.htm> (referer: https://docs.imunifyav.com/history4.htm)
+2019-02-07 14:15:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/cli.htm> (referer: https://docs.imunifyav.com/ignore_list4.htm)
+2019-02-07 14:15:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/imunifyav_for_plesk.htm> (referer: https://docs.imunifyav.com/cli.htm)
+2019-02-07 14:15:45 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://docs.imunifyav.com/imunifyav_for_ispmanager.htm> (referer: https://docs.imunifyav.com/imunifyav_for_plesk.htm)
+2019-02-07 14:15:45 [scrapy.core.engine] INFO: Closing spider (finished)
+2019-02-07 14:15:45 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 10473,
+ 'downloader/request_count': 37,
+ 'downloader/request_method_count/GET': 37,
+ 'downloader/response_bytes': 396372,
+ 'downloader/response_count': 37,
+ 'downloader/response_status_count/200': 36,
+ 'downloader/response_status_count/404': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2019, 2, 7, 11, 15, 45, 986281),
+ 'log_count/DEBUG': 38,
+ 'log_count/INFO': 7,
+ 'memusage/max': 75239424,
+ 'memusage/startup': 75239424,
+ 'request_depth_max': 35,
+ 'response_received_count': 37,
+ 'scheduler/dequeued': 36,
+ 'scheduler/dequeued/memory': 36,
+ 'scheduler/enqueued': 36,
+ 'scheduler/enqueued/memory': 36,
+ 'start_time': datetime.datetime(2019, 2, 7, 11, 15, 8, 694152)}
+2019-02-07 14:15:45 [scrapy.core.engine] INFO: Spider closed (finished)
+
+Process finished with exit code 0
