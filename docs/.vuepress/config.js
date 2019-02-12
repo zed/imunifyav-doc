@@ -15,12 +15,12 @@ module.exports = {
     "/": {
       lang: "en-US", // this will be set as the lang attribute on <html>
       title: "Documentation",
-      description: "Imunify360 documentation"
+      description: "ImunifyAV documentation"
     },
     "/ru/": {
       lang: "ru",
       title: "Документация",
-      description: "Документация Imunify360"
+      description: "Документация ImunifyAV"
     }
   },
   theme: "cloudlinux",
@@ -88,7 +88,6 @@ module.exports = {
             collapsable: false,
             children: [
               "/imunifyav/",
-              "/imunifyav2/",
               "/cli/",
               "/imunifyav_for_plesk/",
               "/imunifyav_for_ispmanager/"
@@ -103,7 +102,7 @@ module.exports = {
         editLinkText: "Отредактировать",
         serviceWorker: {
           updatePopup: {
-            message: "Новый контент доступен",
+            message: "Доступен новый контент",
             buttonText: "Обновить"
           }
         },
