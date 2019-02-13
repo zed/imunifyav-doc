@@ -55,7 +55,6 @@ module.exports = {
     "/index.html?ignore_list2.htm": "/imunifyav/#ignore-list",
     "/imunifyav2.htm/": "/imunifyav2/",
     "/imunifyav2.htm": "/imunifyav2/",
-    "/index.html?imunifyav2.htm": "/imunifyav2/",
     "/installation_guide4.htm/": "/imunifyav2/#installation-guide",
     "/installation_guide4.htm": "/imunifyav2/#installation-guide",
     "/index.html?installation_guide4.htm": "/imunifyav2/#installation-guide",
