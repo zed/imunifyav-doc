@@ -17,11 +17,6 @@ module.exports = {
       title: "Documentation",
       description: "ImunifyAV documentation"
     },
-    "/ru/": {
-      lang: "ru",
-      title: "Документация",
-      description: "Документация ImunifyAV"
-    }
   },
   theme: "cloudlinux",
   // theme: '/Users/prefer/src/cloudlinux-doc-theme', // local path
@@ -32,12 +27,12 @@ module.exports = {
     docsBranch: "dev",
     docsDir: "docs",
 
-    translationSource: 'docs.imunify360.com',
+    translationSource: 'docs.imunifyav.com',
     defaultURL: "/imunifyav/",
     redirectionMapping: urls,
     sidebarDepth: 2,
     logo: "/logo.svg",
-    try_free: "https://www.imunify360.com/trial",
+    try_free: "https://www.imunify360.com/antivirus",
     bottomLinks: [
       {
         text: "How to",
@@ -45,11 +40,11 @@ module.exports = {
       },
       {
         text: "Getting started",
-        url: "https://imunify360.com/getting-started"
+        url: "https://www.imunify360.com/antivirus"
       },
       {
         text: "Contact support",
-        url: "https://cloudlinux.zendesk.com/hc/en-us/requests/new"
+        url: "https://cloudlinux.zendesk.com/hc/requests/new"
       },
       { text: "Blog", url: "https://www.imunify360.com/blog" }
     ],
@@ -73,6 +68,8 @@ module.exports = {
         label: "English",
         // text for the edit-on-github link
         editLinkText: "Edit this page",
+        tryFree: "Get Free",
+        search: "Search",
         // config for Service Worker
         serviceWorker: {
           updatePopup: {
