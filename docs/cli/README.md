@@ -223,7 +223,8 @@ imunify-antivirus feature-management [command] [--optional argument]...
 
 | | |
 |-|-|
-| `[--feature cleanup]`| specifies which feature to enable/disable|
+|<span class="notranslate">`[--feature cleanup]`</span>|enable/disable <span class="notranslate">Malware Cleanup</span>|
+<span class="notranslate">`[--feature proactive]`</span>|enable/disable <span class="notranslate">Proactive Defense</span>|
 | `[--users [USERS [USERS ...]]]`| specifies the list of users which will be affected, otherwise the default value will be changed|
 
 The mandatory argument for the `get` command:
