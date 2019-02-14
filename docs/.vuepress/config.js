@@ -33,21 +33,7 @@ module.exports = {
     sidebarDepth: 2,
     logo: "/logo.svg",
     try_free: "https://www.imunify360.com/antivirus",
-    bottomLinks: [
-      {
-        text: "How to",
-        url: "https://cloudlinux.zendesk.com/hc/sections/115001344329-How-do-I"
-      },
-      {
-        text: "Getting started",
-        url: "https://www.imunify360.com/antivirus"
-      },
-      {
-        text: "Contact support",
-        url: "https://cloudlinux.zendesk.com/hc/requests/new"
-      },
-      { text: "Blog", url: "https://www.imunify360.com/blog" }
-    ],
+
     social: [
       { url: "https://www.facebook.com/imunify360/", logo: "/fb.png" },
       { url: "https://twitter.com/imunify360/", logo: "/tw.png" },
@@ -79,6 +65,22 @@ module.exports = {
         },
         algolia: {},
 
+        bottomLinks: [
+          {
+            text: "How to",
+            url: "https://cloudlinux.zendesk.com/hc/sections/115001344329-How-do-I"
+          },
+          {
+            text: "Getting started",
+            url: "https://www.imunify360.com/antivirus"
+          },
+          {
+            text: "Contact support",
+            url: "https://cloudlinux.zendesk.com/hc/requests/new"
+          },
+          { text: "Blog", url: "https://www.imunify360.com/blog" }
+        ],
+        
         sidebar: [
           {
             title: "Contents",
