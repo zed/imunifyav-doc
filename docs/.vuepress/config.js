@@ -22,7 +22,7 @@ module.exports = {
   // theme: '/Users/prefer/src/cloudlinux-doc-theme', // local path
 
   themeConfig: {
-    repo: "cloudlinux/imunify360-doc",
+    repo: "cloudlinux/imunifyav-doc",
     editLinks: true,
     docsBranch: "dev",
     docsDir: "docs",
@@ -80,7 +80,7 @@ module.exports = {
           },
           { text: "Blog", url: "https://www.imunify360.com/blog" }
         ],
-        
+
         sidebar: [
           {
             title: "Contents",
