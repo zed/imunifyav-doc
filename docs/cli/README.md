@@ -308,9 +308,7 @@ The argument that specifies which kind of hashes to add/remove:
 | `delete`| delete malicious file or files divided by space|
 | `list`| show a list of malicious files|
 | `move-to-ignore`| move a file or files divided by space to the Ignore List|
-| `quarantine-malicious`| allows to add malicious files to quarantine|
 | `restore-from-backup`| restore source files from backup|
-| `restore-from-quarantine`| restore files from quarantine|
 
 `command` is a second positional argument for `on-demand` and can be:
 
@@ -328,7 +326,6 @@ The argument that specifies which kind of hashes to add/remove:
 | `delete`| delete suspicious file or files divided by space|
 | `list`| show a list of suspicious files|
 | `move-to-ignore`| move suspicious files divided by space to the Ignore List|
-| `move-to-quarantine`| move suspicious files divided by space to the quarantine|
 
 **Examples**
 
