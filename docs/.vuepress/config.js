@@ -63,7 +63,11 @@ module.exports = {
             buttonText: "Refresh"
           }
         },
-        algolia: {},
+        algolia: {
+          apiKey: '72b99b2f6b6a799a02a845854d728014',
+          indexName: 'imunifyav',
+          appId: 'KMC9498739'
+        },
 
         bottomLinks: [
           {
@@ -105,7 +109,11 @@ module.exports = {
             buttonText: "Обновить"
           }
         },
-        algolia: {},
+        algolia: {
+          apiKey: '72b99b2f6b6a799a02a845854d728014',
+          indexName: 'imunifyav',
+          appId: 'KMC9498739'
+        },
         sidebar: [
           {
             title: "Содержание",
