@@ -64,9 +64,8 @@ module.exports = {
           }
         },
         algolia: {
-          apiKey: '72b99b2f6b6a799a02a845854d728014',
-          indexName: 'imunifyav',
-          appId: 'KMC9498739'
+          apiKey: '1ee8ee1bcded0cdcc07ffb4bc8c51d95',
+          indexName: 'imunifyav'
         },
 
         bottomLinks: [
@@ -110,9 +109,8 @@ module.exports = {
           }
         },
         algolia: {
-          apiKey: '72b99b2f6b6a799a02a845854d728014',
-          indexName: 'imunifyav',
-          appId: 'KMC9498739'
+          apiKey: '1ee8ee1bcded0cdcc07ffb4bc8c51d95',
+          indexName: 'imunifyav'
         },
         sidebar: [
           {
