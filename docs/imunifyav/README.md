@@ -95,6 +95,8 @@ yum update imunify-antivirus --enablerepo=imunify360-testing
 
 ## Uninstall
 
+### How to uninstall ImunifyAV
+
 To uninstall ImunifyAV, run the command:
 
 ```
@@ -108,6 +110,27 @@ wget https://repo.imunify360.cloudlinux.com/defence360/imav-deploy.sh
 ```
 
 And proceed to the directory with the script.
+
+
+### How to stop ImunifyAV
+
+For CentOS6/CloudLinux6, run the following command:
+
+<div class="notranslate">
+
+```
+service imunify-antivirus stop
+```
+</div>
+
+For all other operating systems, run the following command:
+
+<div class="notranslate">
+
+```
+systemctl stop imunify-antivirus
+```
+</div>
 
 ## Localization
 
