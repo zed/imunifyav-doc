@@ -290,7 +290,7 @@ When scanning is completed, the results are shown in the table below with the fo
 The following filters are available:
 
 **Timeframe** — displays the results filtered by chosen period or date.
-To review and manage suspicious and quarantined files go to [Files](/imunifyav/#files) tab.
+To review and manage suspicious files go to [Files](/imunifyav/#files) tab.
 The table can be sorted by Date, Path, Total files, and Result.
 
 ### History
@@ -313,14 +313,12 @@ The table has the following columns:
   * **Detected as malicious** — after scanning the file was detected as infected;
   * **Cleaned** — the file is cleaned up.
   * **Failed to clean up** — there was a problem during cleanup. Hover mouse over the info icon to read more.
-  * **Added to Ignore List** — the file was added to Ignore List. ImunifyAV will not scan it but the file is not quarantined.
+  * **Added to Ignore List** — the file was added to Ignore List. ImunifyAV will not scan it.
   * **Restored original** — file content was restored as not malicious.
   * **Cleanup removed content** — file contend was removed after cleanup.
   * **Deleted from Ignore List** — the file was removed from Ignore List. ImunifyAV will scan it.
   * **Deleted** — the file was deleted.
   * **Submitted for analysis** — the file was submitted to Imunify360 team for analysis.
-  * **Quarantined<sup>AV+</sup>** — the file was added to quarantine. It is no longer executable
-  * **Restored from quarantine<sup>AV+</sup>** — for now, the file is executable.
   * **Failed to delete** — there was a problem during removal. Hover mouse over the info icon to read more.
   * **Failed to ignore** — there was a problem during adding to Ignore List. Hover mouse over the info icon to read more.
   * **Failed to delete from ignore** — there was a problem during removal from Ignore List. Hover mouse over the info icon to read more.
@@ -481,7 +479,7 @@ The table has the following columns:
   * **Detected as malicious** — after scanning the file was detected as infected;
   * **Cleaned** — the file is cleaned up.
   * **Failed to clean up** — there was a problem during cleanup. Hover mouse over the info icon to read more.
-  * **Added to Ignore List** — the file was added to Ignore List. ImunifyAV will not scan it but the file is not quarantined.
+  * **Added to Ignore List** — the file was added to Ignore List. ImunifyAV will not scan it.
   * **Restored original** — file content was restored as not malicious.
   * **Cleanup removed content** — file contend was removed after cleanup.
   * **Deleted from Ignore List** — the file was removed from Ignore List. ImunifyAV will scan it.
