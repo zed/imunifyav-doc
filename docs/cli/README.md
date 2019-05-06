@@ -251,19 +251,17 @@ Allows to manage malware-related operation.
 imunify-antivirus malware [command] [--argument]...
 ```
 
-`Command` can be one of the following:
+`command` can be one of the following:
 
 | | |
 |-|-|
 | `cleanup status`| show the status of the cleanup process|
-| `hash`| allows to manage hashes|
+| `hash`| file hash white/blacklist related operations|
 | `history list`| lists the complete history of all malware-related incidents/actions (optional arguments available)|
-| `ignore`| allows to add, delete or show files which will not be scanned|
-| `malicious`| allows to manage malicious files|
-| `on-demand`| allows to manage on-demand scanner|
-| `read`| allows to read malware files|
-| `suspicious`| allows to manage suspicious files|
-
+| `ignore`| malware Ignore List operations|
+| `malicious`| malware Malicious List operations|
+| `on-demand`| on-demand Scanner operations|
+| `suspicious`| malware Suspicious List operations|
 
 The optional arguments are:
 
@@ -274,58 +272,78 @@ The optional arguments are:
 | `--since SINCE`| start date|
 | `--offset OFFSET`| offset for pagination (by default, equals 0)|
 | `--user USER`| returns results for a chosen user|
+| `--by-status [BY_STATUS [BY_STATUS ...]]`|return items with selected status|
+| `--by-scan-id BY_SCAN_ID`|return items with selected ID|
+| `--items ITEMS`|return selected items|
 | `--to TO`| end date|
 | `--search SEARCH`| search query|
+
 
 `action` is the second positional argument for `hash` and can be one of the following:
 
 | | |
 |-|-|
-| `list`|list added hashes|
-| `add`|add file hashes of the specified type|
-| `remove`| remove file hashes of the specified type|
+| `list`|list white/black-listed file hashes (optional arguments apply)|
+| `add`|add file hash(es) of the specified type|
+| `remove`| remove file hash(es) of the specified type|
 
-Positional argument for `add/remove` is the list of SHA256 hashes calculated from the file contents
+Positional arguments for `add/remove` are the list of SHA256 hashes calculated from the file contents
 
 The argument that specifies which kind of hashes to add/remove:
 
-```
---type -- hash(es) type: black or white
-```
+`--type` - hash(es) type: black or white
 
-`command` is a second positional argument for `ignore` and can be:
 
-| | |
-|-|-|
-| `add`| add a file or files divided by space to the Ignore List|
-| `delete`| delete an ignored file or files divided by space from the list|
-| `list`| show a list of ignored files|
-
-`command` is a second positional argument for `malicious` and can be:
+`action` is the second positional argument for `ignore` and can be one of the following:
 
 | | |
 |-|-|
-| `delete`| delete malicious file or files divided by space|
-| `list`| show a list of malicious files|
-| `move-to-ignore`| move a file or files divided by space to the Ignore List|
-| `restore-from-backup`| restore source files from backup|
+|`add`|add a file PATH to the Ignore List|
+|`delete`|delete a file PATH from the Ignore List|
+|`list`|shows Ignore List entries (optional arguments apply)|
 
-`command` is a second positional argument for `on-demand` and can be:
-
-| | |
-|-|-|
-| `start`| start on-demand scanner for the path specified after the start command|
-| `list`| returns a list of all on-demand scanner session results|
-| `status`| show current status for on-demand scanner|
-| `stop`| stop current scanning|
-
-`command` is a second positional argument for `suspicious` and can be:
+`command2` is the second positional argument for the `malicious` command and can be one of the following:
 
 | | |
 |-|-|
-| `delete`| delete suspicious file or files divided by space|
-| `list`| show a list of suspicious files|
-| `move-to-ignore`| move suspicious files divided by space to the Ignore List|
+|`cleanup`|clean up infected ITEMS for a USER|
+|`cleanup-all`|clean up all files that have been detected as infected for all users|
+|`restore-original`|restore the original (malicious/infected) file to its original location|
+|`delete`|delete malicious/infected files|
+|`list`|list malicious/infected files|
+|`move-to-ignore`|move a malicious list entry to the (malware) Ignore List|
+|`remove-from-list`|remove malicious/infected files from the Malicious List|
+|`restore-from-backup`|restore a clean version of infected file from backup|
+
+
+`action` is the second positional argument for `on-demand` and can be one of the following:
+
+| | |
+|-|-|
+|`list`|list all on-demand scans performed|
+|`start --path PATH`|starts an on-demand scan for a specified PATH|
+|`status`|show the on-demand malware scanner status|
+|`stop`|stop on-demand malware scanner process|
+
+The optional arguments for `on-demand start` are:
+
+| |
+|-|
+|`--ignore-mask IGNORE_MASK`|
+|`--follow-symlinks`|
+|`--no-follow-symlinks`|
+|`--file-mask FILE_MASK`|
+|`--hash-filter`|
+|`--no-hash-filter`|
+|`--intensity {low,moderate,high}`|
+
+`action` is the second positional argument for `suspicious` and can be one of:
+
+| | |
+|-|-|
+|`delete`|delete a Suspicious List entry|
+|`list`|obtain the list of Suspicious List entries|
+|`move-to-ignore`|move a Suspicious List entry to the (malware) Ignore List|
 
 **Examples**
 
