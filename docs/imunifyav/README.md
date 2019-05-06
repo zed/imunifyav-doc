@@ -68,7 +68,7 @@ where `YOUR_KEY` is your license key. Replace `YOUR_KEY` with the actual key pur
 If you have an IP-based license for **ImunifyAV+**, run the same script with no arguments:
 
 ```
-wget
+wget https://repo.imunify360.cloudlinux.com/defence360/imav-deploy.sh
 bash imav-deploy.sh --key IPL
 ```
 
