@@ -313,7 +313,6 @@ The argument that specifies which kind of hashes to add/remove:
 |`list`|list malicious/infected files|
 |`move-to-ignore`|move a malicious list entry to the (malware) Ignore List|
 |`remove-from-list`|remove malicious/infected files from the Malicious List|
-|`restore-from-backup`|restore a clean version of infected file from backup|
 
 
 `action` is the second positional argument for `on-demand` and can be one of the following:
