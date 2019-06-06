@@ -358,5 +358,7 @@ imunify-antivirus malware hash add --type black ba7816bf8f01cfea414140de5dae2223
 imunify-antivirus malware on-demand start --path /home/<username>/public_html/
 ```
 
+## Hooks
 
+Hooks-related command description is available [here](/imunifyav/#hooks-cli)
 
