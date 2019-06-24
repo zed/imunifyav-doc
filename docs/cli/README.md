@@ -30,9 +30,7 @@ imunify-antivirus [command] [--option1] [--option2]...
 | `add-sudouser`| add a user with root privileges|
 | `checkdb`| check database integrity|
 | `delete-sudouser`| remove a user with root privileges|
-| `disable-plugin`| disable hosting panel plugin|
 | `doctor`| collect info about the system and send it to ImunifyAV|
-| `enable-plugin`| enable hosting panel plugin (if detected)|
 | `register`| register the agent|
 | `rstatus`| send a query to server to the check if the license is valid|
 | `unregister`| unregister the agent|
@@ -86,16 +84,6 @@ This command removes a user with root privileges from the server.
 imunify-antivirus delete-sudouser <userID> [--optional arguments]
 ```
 
-## Disable-plugin
-
-This command disables hosting panel default malware plugin.
-
-**Usage:**
- 
-```
-imunify-antivirus disable-plugin <panel> [--optional arguments]
-```
-
 ## Doctor
 
 This command collects information about ImunifyAV state, generates the report and sends it to the ImunifyAV Support Team. This command can be used in case of any troubles or issues with ImunifyAV. This command will generate a key to be sent to the ImunifyAV Support Team. With that key the ImunifyAV Support Team can help with any problem as fast as possible.
@@ -104,16 +92,6 @@ This command collects information about ImunifyAV state, generates the report an
  
 ```
 imunify-antivirus doctor [--optional arguments]
-```
-
-## Enable-plugin
-
-This command enables hosting panel default malware plugin if it was detected.
-
-**Usage:**
-
-```
-imunify-antivirus enable-plugin <panel> [--optional arguments]
 ```
 
 ## Register
