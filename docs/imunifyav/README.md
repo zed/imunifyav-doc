@@ -376,7 +376,6 @@ Go to ImunifyAV → Settings tab to set up the behaviour of ImunifyAV scanner.
 The following settings are available:
 
 * **Enable Sentry error reporting** — send error reports to ImunifyAV error report server.
-* **Show ClamAV scanning results** – shoiw ClamAV scanning results on _Users/Files_ tab.
 
 **ImunifyAV+ Settings**
 
@@ -387,7 +386,6 @@ The following settings are available:
 The following settings are available:
 
 * **Automatically send malicious files for analysis** — send ImunifyAV team the files detected as malicious for analysis. Switched on by default.
-* **Show ClamAV scanning results** – show ClamAV scanning results on _Users/Files_ tab.
 * **Trim instead of removal** — do not remove infected file during cleanup but make the file zero-size (for malwares like web-shells);
 * **Keep original files for … days** — the original infected file is available for restore within the defined period. Default is 14 days.
 * **Enable Sentry error reporting** — send error reports to ImunifyAV error report server.
