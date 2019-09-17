@@ -234,7 +234,6 @@ imunify-antivirus malware [command] [--argument]...
 | | |
 |-|-|
 | `cleanup status`| show the status of the cleanup process|
-| `hash`| file hash white/blacklist related operations|
 | `history list`| lists the complete history of all malware-related incidents/actions (optional arguments available)|
 | `ignore`| malware Ignore List operations|
 | `malicious`| malware Malicious List operations|
@@ -255,21 +254,6 @@ The optional arguments are:
 | `--items ITEMS`|return selected items|
 | `--to TO`| end date|
 | `--search SEARCH`| search query|
-
-
-`action` is the second positional argument for `hash` and can be one of the following:
-
-| | |
-|-|-|
-| `list`|list white/black-listed file hashes (optional arguments apply)|
-| `add`|add file hash(es) of the specified type|
-| `remove`| remove file hash(es) of the specified type|
-
-Positional arguments for `add/remove` are the list of SHA256 hashes calculated from the file contents
-
-The argument that specifies which kind of hashes to add/remove:
-
-`--type` - hash(es) type: black or white
 
 
 `action` is the second positional argument for `ignore` and can be one of the following:
@@ -310,8 +294,6 @@ The optional arguments for `on-demand start` are:
 |`--follow-symlinks`|
 |`--no-follow-symlinks`|
 |`--file-mask FILE_MASK`|
-|`--hash-filter`|
-|`--no-hash-filter`|
 |`--intensity {low,moderate,high}`|
 
 `action` is the second positional argument for `suspicious` and can be one of:
@@ -322,15 +304,9 @@ The optional arguments for `on-demand start` are:
 |`list`|obtain the list of Suspicious List entries|
 |`move-to-ignore`|move a Suspicious List entry to the (malware) Ignore List|
 
-**Examples**
+**Example**
 
-1. The following command adds a hash to the malware Black List:
-
-```
-imunify-antivirus malware hash add --type black ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad
-```
-
-2. The following command starts on-demand scanner for the path specified after the `start` command:
+1. The following command starts on-demand scanner for the path specified after the `start` command:
 
 ```
 imunify-antivirus malware on-demand start --path /home/<username>/public_html/
