@@ -94,6 +94,7 @@ module.exports = {
             children: [
               "/imunifyav/",
               "/cli/",
+              "/stand_alone_mode/",
               "/imunifyav_for_plesk/",
               "/imunifyav_for_ispmanager/"
             ]
