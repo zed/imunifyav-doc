@@ -29,8 +29,10 @@ imunify-antivirus [command] [--option1] [--option2]...
 | `start`| start the agent|
 | `add-sudouser`| add a user with root privileges|
 | `checkdb`| check database integrity|
+| `check-domains` | send domain list check|
 | `delete-sudouser`| remove a user with root privileges|
 | `doctor`| collect info about the system and send it to ImunifyAV|
+| `infected-domains` | returns infected domain list|
 | `register`| register the agent|
 | `rstatus`| send a query to server to the check if the license is valid|
 | `unregister`| unregister the agent|
@@ -73,6 +75,31 @@ If this command cannot restore database integrity, then it will destroy the orig
 ```
 imunify-antivirus checkdb [--optional arguments]
 ```
+
+## Check-domains
+
+
+Allows to send domains list to check on ImunifyAV central server. This command requires cPanel. After domains checked, the results is available via the `infected-domains` command.
+
+::: tip Note
+`check-domains` command may take a few minutes to complete.
+:::
+
+**Usage**:
+
+
+```
+imunify-antivirus check-domains [--optional arguments]
+```
+
+**Optional arguments**:
+
+| | |
+|-|-|
+|`-h, --help`|show this help message|
+|`--json`|return data in JSON format|
+|`--verbose, -v`|allows to return data in good-looking view if option `--json` is used|
+
 
 ## Delete-sudouser
 
@@ -311,6 +338,26 @@ The optional arguments for `on-demand start` are:
 ```
 imunify-antivirus malware on-demand start --path /home/<username>/public_html/
 ```
+
+## Infected-domains
+
+Allows to retrieve infected domains list.
+
+**Usage**:
+
+```
+imunify-antivirus infected-domains [-h] [--optional arguments]
+```
+
+Optional arguments for `list`:
+
+| | |
+|-|-|
+|`--json`|Returns data in JSON format.|
+|`--limit`|Limits the output with the specified number of domains.<br>Must be a number greater than zero. By default, equals 100.|
+|`--offset`|Offset for pagination. By default, equals 0.|
+|`--verbose, -v`|Allows to return data in a good-looking view if option `--json` is used.|
+
 
 ## Hooks
 

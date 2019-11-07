@@ -365,6 +365,47 @@ The table has the following columns:
 
 To perform a bulk action, tick required users and move the _Malware Cleanup_ slider at the table header. Confirm the action on the confirmation popup.
 
+### Reputation Management <Badge text="AV+"/>
+
+Reputation Management is an analyzing and notifying tool intended to inform about websites blocking and blacklisting.
+
+Choose _Reputation Management_ in the main menu of the ImunifyAV user interface to get to the Reputation Management page.
+
+Reputation Management allows to check if a domain registered on your server is safe or not based on the following reputation engines:
+
+* [Google Safe Browsing](https://safebrowsing.google.com/)
+* [Yandex Safe Browsing](https://tech.yandex.com/safebrowsing/)
+* [Spamhaus](https://www.spamhaus.org/)
+* [PhishTank](https://www.phishtank.com/)
+* [OpenPhish](https://openphish.com/).
+
+How does it work:
+
+* We get a list of domains periodically (via crontab)
+* Send it to the central Imunify server
+* Get results from it
+* Add bad domains to the list of Reputation Management
+
+If a domain or an IP is blocked, then this information will be available in the table below. If a user’s website appears in this table, then it would be useful to send [this link](https://developers.google.com/webmasters/hacked/) to the user. This instruction can help to solve problems with the domain.
+
+At the top of the page (also in the main menu near Reputation Management item), ImunifyAV shows the number of affected domains. This number is a quantity of affected domains that exist on the server.
+
+The table shows:
+
+* _ID_ – domain owner username
+* _URL_ – the affected domain link
+* _Type_ – read more about types [on the link](https://developers.google.com/safe-browsing/v4/reference/rest/v4/ThreatType) (we still do not support THREAT_TYPE_UNSPECIFIED and POTENTIALLY_HARMFUL_APPLICATION).
+* _Detection time_ – exact time when the Reputation Management has detected the domain
+
+![](/images/reputation.png) 
+
+Click link icon in the _Action_ column to copy the URL to the clipboard.
+
+::: tip Note
+Reputation Management online and browser look may differ. This is because Google Safe Browsing has an issue described on github.
+:::
+
+
 ### Settings
 
 
