@@ -348,7 +348,7 @@ The following filters are available:
 
 The table can be sorted by Added and Path. By default, it is sorted from newest to oldest.
 
-### Features Management<sup> AV</sup>
+### Features Management <Badge text="AV"/>
 
 Features Management tab allows to enable or disable ImunifyAV features for each customer. Go to ImunifyAV → Features Management tab.
 
@@ -367,9 +367,13 @@ To perform a bulk action, tick required users and move the _Malware Cleanup_ sli
 
 ### Reputation Management <Badge text="AV+"/>
 
+:::tip Note
+Reputation Management is available in ImunifyAV+ only.
+:::
+
 Reputation Management is an analyzing and notifying tool intended to inform about websites blocking and blacklisting.
 
-Choose _Reputation Management_ in the main menu of the ImunifyAV user interface to get to the Reputation Management page.
+Choose _Reputation Management_ in the main menu of the ImunifyAV+ user interface to get to the Reputation Management page.
 
 Reputation Management allows to check if a domain registered on your server is safe or not based on the following reputation engines:
 
@@ -388,7 +392,7 @@ How does it work:
 
 If a domain or an IP is blocked, then this information will be available in the table below. If a user’s website appears in this table, then it would be useful to send [this link](https://developers.google.com/webmasters/hacked/) to the user. This instruction can help to solve problems with the domain.
 
-At the top of the page (also in the main menu near Reputation Management item), ImunifyAV shows the number of affected domains. This number is a quantity of affected domains that exist on the server.
+At the top of the page (also in the main menu near Reputation Management item), ImunifyAV+ shows the number of affected domains. This number is a quantity of affected domains that exist on the server.
 
 The table shows:
 

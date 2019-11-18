@@ -111,5 +111,6 @@ module.exports = {
     "/index.html?imunifyav_for_plesk.htm": "/imunifyav_for_plesk/",
     "/imunifyav_for_ispmanager.htm/": "/imunifyav_for_ispmanager/",
     "/imunifyav_for_ispmanager.htm": "/imunifyav_for_ispmanager/",
-    "/index.html?imunifyav_for_ispmanager.htm": "/imunifyav_for_ispmanager/"
+    "/index.html?imunifyav_for_ispmanager.htm": "/imunifyav_for_ispmanager/",
+    "/imunifyav/#features-management-av": "/imunifyav/#features-management"
 };
