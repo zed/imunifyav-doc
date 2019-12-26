@@ -66,7 +66,7 @@ bash imav-deploy.sh --key YOUR_KEY
  
 where `YOUR_KEY` is your license key. Replace `YOUR_KEY` with the actual key purchased at [https://www.imunify360.com/](https://www.imunify360.com/).
 
-If you have an IP-based license for **ImunifyAV+**, run the same script with no arguments:
+If you have an IP-based license for **ImunifyAV+**, use IPL as license key:
 
 ```
 wget https://repo.imunify360.cloudlinux.com/defence360/imav-deploy.sh
