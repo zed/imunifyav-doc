@@ -19,7 +19,7 @@ Imunify Web-UI PHP code has to be executed under a user which has access to `/va
 #### How to configure ImunifyAV UI
 
 :::warning Note
-Imunify UI requires PHP function `passthru` to be enabled. If you are unable to log in, you might see a related message in the `errror.log` of the web-server.
+Imunify UI requires the `proc_open` PHP function to be enabled. If you are unable to log in, you might see a related message in the `errror.log` of the web-server.
 If so, please remove it from the `disable_functions` list in `php.ini`.
 :::
 
