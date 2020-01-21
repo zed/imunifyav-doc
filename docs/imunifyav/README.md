@@ -46,6 +46,10 @@ ImunifyAV provides malware scanning features for cPanel and DirectAdmin control 
 
 ### Installation Instructions
 
+:::warning Warning
+On DirectAdmin, Imunify UI requires the `proc_open` PHP function to be enabled. If you are unable to log in, you might see a related message in the `errror.log` of the web-server. If so, please remove it from the `disable_functions` list in `php.ini`.
+:::
+
 To install ImunifyAV proceed the following steps:
 
 1. Log in with root privileges to the server where ImunifyAV should be installed.
