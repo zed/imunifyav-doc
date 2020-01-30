@@ -23,31 +23,31 @@ Imunify UI requires the `proc_open` PHP function to be enabled. If you are unabl
 If so, please remove it from the `disable_functions` list in `php.ini`.
 :::
 
-Create the file `/etc/sysconfig/imunify360/integration.conf` with the `UI_PATH` option defining the path that will serve web-based UI.
+Create the file `/etc/sysconfig/imunify360/integration.conf` with the `ui_path` option defining the path that will serve web-based UI.
 
 For example:
 
 ```
-[PATHS]
-UI_PATH = /var/www/vhosts/imav/imav.example-hosting.com/html/imav
+[paths]
+ui_path = /var/www/vhosts/imav/imav.example-hosting.com/html/imav
 ```
 
 ImunifyAV will automatically copy UI files there during installation/upgrade.
 
 :::tip Note
-Ensure that the domain you are going to use for the ImunifyAV web-based UI refers to this path, and that there are no other scripts or files under `UI_PATH`, as they might be overridden by the ImunifyAV installation.
+Ensure that the domain you are going to use for the ImunifyAV web-based UI refers to this path, and that there are no other scripts or files under `ui_path`, as they might be overridden by the ImunifyAV installation.
 :::
 
 #### How to provide ImunifyAV with an actual list of users (optional)
 
-By default, ImunifyAV will use Linux system users, limited by `UID_MIN` and `UID_MAX` from `/etc/login.defs`.
+By default, ImunifyAV will use Linux system users, limited by `uid_min` and `uid_max` from `/etc/login.defs`.
 
-If you want to see a specific list of users (note, that all of them must be real linux users accessible via PAM), you can specify the `USER_LIST_SCRIPT` option in `/etc/sysconfig/imunify360/integration.conf`:
+If you want to see a specific list of users (note, that all of them must be real linux users accessible via PAM), you can specify the `user_list_script` option in `/etc/sysconfig/imunify360/integration.conf`:
 
 ```
-[PATHS]
-UI_PATH = …
-USER_LIST_SCRIPT = /path/to/get-users-script.sh
+[paths]
+ui_path = …
+user_list_script = /path/to/get-users-script.sh
 ```
 
 It should point to an executable file that generates a json file with the following schema (domains are optional):
@@ -66,11 +66,11 @@ ImunifyAV can use PAM to authenticate users.
 
 Once the UI is opened, the user sees a sign-in form. The credentials are checked via PAM.
 
-You can specify which PAM service ImunifyAV should use with the `SERVICE_NAME` option:
+You can specify which PAM service ImunifyAV should use with the `service_name` option:
 
 ```
-[PAM]
-SERVICE_NAME = system-auth
+[pam]
+service_name = system-auth
 ```
 
 If it is not specified, the “`system-auth`” service is used.
@@ -87,7 +87,7 @@ The installation instructions are the same as for cPanel/DirectAdmin version, an
 
 #### How to open ImunifyAV UI
 
-Once ImunifyAV is installed, the web-based UI is available via the domain configured in `UI_PATH`.
+Once ImunifyAV is installed, the web-based UI is available via the domain configured in `ui_path`.
 
 For example:
 
