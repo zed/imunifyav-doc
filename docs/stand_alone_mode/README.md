@@ -38,6 +38,13 @@ ImunifyAV will automatically copy UI files there during installation/upgrade.
 Ensure that the domain you are going to use for the ImunifyAV web-based UI refers to this path, and that there are no other scripts or files under `ui_path`, as they might be overridden by the ImunifyAV installation.
 :::
 
+:::danger Warning
+Version 4.4 and earlier require an additional upper case paths/ui_path entry in `/etc/sysconfig/imunify360/integration.conf`, like:
+
+[PATHS]
+UI_PATH = /var/www/vhosts/imav/imav.example-hosting.com/html/imav
+:::
+
 #### How to provide ImunifyAV with an actual list of users (optional)
 
 By default, ImunifyAV will use Linux system users, limited by `uid_min` and `uid_max` from `/etc/login.defs`.
