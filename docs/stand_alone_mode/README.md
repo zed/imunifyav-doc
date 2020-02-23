@@ -41,7 +41,7 @@ Ensure that the domain you are going to use for the ImunifyAV web-based UI refer
 :::danger Warning
 Version 4.4 and earlier require an additional upper case paths/ui_path entry in `/etc/sysconfig/imunify360/integration.conf`, like:
 
-[PATHS]
+[PATHS]  
 UI_PATH = /var/www/vhosts/imav/imav.example-hosting.com/html/imav
 :::
 
