@@ -39,10 +39,16 @@ Ensure that the domain you are going to use for the ImunifyAV web-based UI refer
 :::
 
 :::danger Warning
-Version 4.4 and earlier require an additional upper case paths/ui_path entry in `/etc/sysconfig/imunify360/integration.conf`, like:
+The issue fix related to incorrect `integration.conf` file parsing is coming. It will be available to all customers within the next 2 weeks.
+Until that, it is required to list the UI path settings in both lower and upper case, for example:
+
+`/etc/sysconfig/imunify360/integration.conf`
 
 [PATHS]  
-UI_PATH = /var/www/vhosts/imav/imav.example-hosting.com/html/imav
+UI_PATH = /srv/www/example.com/public/ImunifyAV
+
+[paths]  
+ui_path = /srv/www/example.com/public/ImunifyAV
 :::
 
 #### How to provide ImunifyAV with an actual list of users (optional)
