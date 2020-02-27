@@ -228,7 +228,12 @@ The table has the following columns:
 * **Detected** — displays the exact time when a file was detected as malicious.
 * **User name** — displays file owner name.
 * **File** — the path where the file is located starting with root
-* **Reason** — describes the signature which was detected during the scanning process. Names in this column depend on the signature vendor.
+* **Reason** — describes the signature which was detected during the scanning process. Names in this column depend on the signature vendor. You can derive some information from the signature ID itself. `SMW-SA-05155-wshll` – in this Signature ID:
+	* The first section can be either `SMW` or `CMW`. `SMW` stands for Server Malware and `CMW` stands for Client Malware
+	* The second section of ID can be either `INJ` or `SA`. `INJ` stands for Injection (means Malware is Injected to some legitimate file) and `SA` stands for StandAlone (means File is Completely Malicious)
+	* The third section is `05155`. This is simply an identification number for the signature.
+	* The fourth section `wshll/mlw.wp/etc` explains the category and class of malware identified. Here, `wshll` stands for web shell (`mlw` stands for malware).
+	* The fifth section is `0`, which provides the version number of the signature.
 * **Status** — displays the file status:
   * **Infected** — threat was detected after scanning. If a file was not cleaned after cleanup, the info icon is displayed. Hover mouse over info icon to display the reason;
   *  **Cleaned** —  infected file is cleaned up.
@@ -480,7 +485,12 @@ The table has the following columns:
 
 * **Detected** — displays the exact time when a file was detected as malicious
 * **File** — the path where the file is located starting with root
-* **Reason** — describes the signature which was detected during the scanning process. Names in this column depend on the signature vendor
+* **Reason** — describes the signature which was detected during the scanning process. Names in this column depend on the signature vendor. You can derive some information from the signature ID itself. `SMW-SA-05155-wshll` – in this Signature ID:
+	* The first section can be either `SMW` or `CMW`. `SMW` stands for Server Malware and `CMW` stands for Client Malware
+	* The second section of ID can be either `INJ` or `SA`. `INJ` stands for Injection (means Malware is Injected to some legitimate file) and `SA` stands for StandAlone (means File is Completely Malicious)
+	* The third section is `05155`. This is simply an identification number for the signature.
+	* The fourth section `wshll/mlw.wp/etc` explains the category and class of malware identified. Here, `wshll` stands for web shell (`mlw` stands for malware).
+	* The fifth section is `0`, which provides the version number of the signature.
 * **Status** — displays the file status:
   * **Infected** — threat was detected after scanning. If a file was not cleaned after cleanup, the info icon is displayed. Hover mouse over info icon to display the reason
   * **Cleaned** — infected file is cleaned up
