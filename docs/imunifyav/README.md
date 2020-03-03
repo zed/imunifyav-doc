@@ -111,7 +111,7 @@ bash imunify-force-update.sh
 ```
 </div>
 
-:::note
+:::tip Note
 The script can be used as for Imunify360 as for ImunifyAV
 :::
 
