@@ -97,6 +97,23 @@ To upgrade ImunifyAV run the command:
 ```
 yum update imunify-antivirus --enablerepo=imunify360-testing
 ```
+### Gradual roll-out 
+
+New stable ImunifyAV versions are scheduled for the gradual roll-out from our production repository and are available for all customers in about two weeks or less from the release.
+
+If you do not want to wait for the gradual roll-out, you can update ImunifyAV to the latest version by running the following commands:
+
+<div class="notranslate">
+
+```
+wget https://repo.imunify360.cloudlinux.com/defence360/imunify-force-update.sh
+bash imunify-force-update.sh
+```
+</div>
+
+:::note
+The script can be used as for Imunify360 as for ImunifyAV
+:::
 
 ## Uninstall
 
