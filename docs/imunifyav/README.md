@@ -285,13 +285,17 @@ Malware scanner allows users to scan a specific directory or file for malware. G
 It is possible to use _Advanced_ settings:
 * **Filename mask** allows to set file type for scanning (for example, `*.php` - all the files with the extension php). The default setting is `*` which means all files without restriction.
 * **Ignore mask** allows to set file type to ignore (for example, `*.html` will ignore all files with the extension html).
-* **Intensity** — defines the priority and resources that will be used for scanning  without decreasing efficiency.
-  * **Low** — low priority and fewer resources consumption
-  * **Moderate** — medium priority and resources consumption
-  * **High** — the highest priority and resources consumption
-2. Click _Start_.
+* <span class="notranslate">**CPU consumption**</span>. Defines the CPU consumption for scanning without decreasing efficiency: from <span class="notranslate">Low</span> to <span class="notranslate">High</span>.
+* <span class="notranslate">**I/O consumption**</span>. Defines the I/O consumption for scanning without decreasing efficiency: from <span class="notranslate">Low</span> to <span class="notranslate">High</span>.
+* <span class="notranslate">**Follow symlinks**</span>. Follow all symlinks within the folder to scan. 
 
-| ![](/images/avhosterscan_zoom70.png) |
+:::tip Note
+If ImunifyAV <sup>4.6+</sup> is running on CloudLinux OS, LVE is used to manage scan intensity. If it is running on other operating systems, “nice” is used to control CPU and “ionice” is used when the I/O scheduler is CFQ.
+:::
+
+  2. Click _Start_.
+
+| ![](/images/malware_scanner_4_7.png) |
 |:--:| 
 | *ImunifyAV → Scan tab* |
 
@@ -493,6 +497,9 @@ Go to ImunifyAV → Settings tab to set up the behaviour of ImunifyAV scanner. H
   Low I/O usage means low scanning speed
   :::
 
+  :::tip Note
+  If ImunifyAV <sup>4.6+</sup> is running on CloudLinux OS, LVE is used to manage scan intensity. If it is running on other operating systems, “nice” is used to control CPU and “ionice” is used when the I/O scheduler is CFQ.
+  :::
 
 #### General
 
