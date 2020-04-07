@@ -13,7 +13,7 @@ There are some basic steps to run ImunifyAV as a stand-alone application:
 3. Configure a user authentication process
 
 :::warning Warning
-Imunify Web-UI PHP code has to be executed under a user which has access to `/var/run/defence360agent/non_root_simple_rpc.sock`. If it runs in CageFS, you'll need to configure it accordingly.
+Imunify Web-UI PHP code has to be executed under a non-root user which has access to `/var/run/defence360agent/non_root_simple_rpc.sock`. If it runs in CageFS, you'll need to configure it accordingly.
 :::
 
 #### How to configure ImunifyAV UI
