@@ -30,6 +30,7 @@ imunify-antivirus [command] [--option1] [--option2]...
 | `add-sudouser`| add a user with root privileges|
 | `checkdb`| check database integrity|
 | `check-domains` | send domain list check|
+| `config update` | update configuration file via CLI|
 | `delete-sudouser`| remove a user with root privileges|
 | `doctor`| collect info about the system and send it to ImunifyAV|
 | `infected-domains` | returns infected domain list|
@@ -99,6 +100,52 @@ imunify-antivirus check-domains [--optional arguments]
 |`-h, --help`|show this help message|
 |`--json`|return data in JSON format|
 |`--verbose, -v`|allows to return data in good-looking view if option `--json` is used|
+
+
+## Config update
+
+Allows to update configuration file via CLI.
+
+
+**Usage:**
+
+```
+imunify-antivirus config update [configuration options]
+```
+
+You can find instructions on how to apply configuration changes from CLI [here](/cli/#how-to-apply-changes-from-cli) and configuration options can be taken from the `/etc/sysconfig/imunify360/imunify360.config` file.
+
+**Example:**
+
+Set the `MALWARE_SCAN_INTENSITY.cpu = 5` configuration option from a command line:
+
+```
+imunify-antivirus config update ‘{"MALWARE_SCAN_INTENSITY": {"cpu": 5}}’
+```
+
+
+#### How to apply changes from CLI
+
+In order to apply changes via command-line interface (CLI), you can use the following command:
+
+```
+imunify-antivirus config update '{"SECTION": {"parameter": value}}'
+```
+
+For example, if you want to set `MALWARE_SCAN_INTENSITY.cpu = 5` from a command line, then you should execute the following command:
+
+```
+imunify-antivirus config update '{"MALWARE_SCAN_INTENSITY": {"cpu": 5}}'
+imunify-antivirus config update '{"MALWARE_SCANNING": {"rapid_scan": true}}'
+```
+
+It is also possible to apply several parameters at once.
+
+For example:
+
+```
+imunify-antivirus config update '{"MALWARE_SCAN_INTENSITY": {"cpu": 5, "io": 7}}'
+```
 
 
 ## Delete-sudouser
