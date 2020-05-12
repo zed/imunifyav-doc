@@ -214,6 +214,7 @@ The table has the following columns:
   * **Cleaning up** — user's files are now cleaning up.
   * **Number of threats** — a number of infected files detected after scanning. Click to go to the _Files_ tab where you can see all malicious files.
   * **No malware found** — no malware was found during scanning.
+  * **Malware cleaned** – click a link to go to the _History_ tab and see details.
 * **Actions**:
   *  **Scan for malware** — click _Scan_ icon to start scanning files for a particular user.
   *  **View report** — click _View Report_ icon to go to the _Files_ tab and display the results of the last scan.
@@ -223,6 +224,8 @@ The table has the following columns:
 :::tip Note
 Cleaning up all files of all users and scanning all files is available in ImunifyAV+. To upgrade to ImunifyAV+, click **Upgrade to ImunifyAV+** , you will be redirected to the [ImunifyAV+ upgrade](/imunifyav/#upgrade) page. Or click _Cleanup all_ button, you will be redirected to the [ImunifyAV+ upgrade](/imunifyav/#upgrade) page.
 :::
+
+The badge in the _History_ tab shows the number of missed events in the Malware Scanner’s History.
 
 The following filters are available:
 
@@ -614,6 +617,8 @@ Actions:
 * **Restore original<sup> AV+</sup>** — click _Restore original_ to restore original file after cleaning up if backup is available.
 
 To perform a bulk action, tick required users and click the corresponding button above the table.
+
+If a user is allowed by the administrator to run a scan at any time on his own, he can see the _Start scanning_ button.
 
 The following filters are available:
 
