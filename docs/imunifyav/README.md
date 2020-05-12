@@ -20,6 +20,7 @@ ImunifyAV provides malware scanning features for cPanel and DirectAdmin control 
 
 * CentOS/RHEL 6 and 7
 * CloudLinux OS 6 and 7
+* Ubuntu 16.04 (LTS only) and 18.04 in [standalone mode](/stand_alone_mode/)
 
 **Virtualization**
 
@@ -61,6 +62,12 @@ wget https://repo.imunify360.cloudlinux.com/defence360/imav-deploy.sh
 bash imav-deploy.sh
 ```
 
+To install ImunifyAV beta version add argument --beta . For example:
+
+```
+bash imav-deploy.sh --beta
+```
+
 If you already have **ImunifyAV+** license key you can use it during installation:
 
 ```
@@ -95,8 +102,29 @@ Where `YOUR_KEY` is your activation key or IPL in case of IP-based license.
 To upgrade ImunifyAV run the command:
 
 ```
+yum update imunify-antivirus
+```
+
+To updade ImunifyAV beta version run the command:
+
+```
 yum update imunify-antivirus --enablerepo=imunify360-testing
 ```
+
+To update ImunifyAV on Ubuntu run the command:
+
+```
+apt-get update
+apt-get install --only-upgrade imunify-antivirus
+```
+
+If you do not want to receive updates from beta, remove beta repository:
+
+```
+rm /etc/apt/sources.list.d/imunify360-testing.list
+apt-get update
+```
+
 ### Gradual roll-out 
 
 New stable ImunifyAV versions are scheduled for the gradual roll-out from our production repository and are available for all customers in about two weeks or less from the release.
@@ -110,10 +138,6 @@ wget https://repo.imunify360.cloudlinux.com/defence360/imunify-force-update.sh
 bash imunify-force-update.sh
 ```
 </div>
-
-:::tip Note
-The script can be used as for Imunify360 as for ImunifyAV
-:::
 
 ## Uninstall
 
@@ -136,7 +160,7 @@ And proceed to the directory with the script.
 
 ### How to stop ImunifyAV
 
-For CentOS6/CloudLinux6, run the following command:
+For CentOS/CloudLinux OS 6, run the following command:
 
 <div class="notranslate">
 
