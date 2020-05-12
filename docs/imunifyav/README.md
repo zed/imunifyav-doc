@@ -18,13 +18,12 @@ ImunifyAV provides malware scanning features for cPanel and DirectAdmin control 
 
 **Operating systems**
 
-* CentOS
-* RHEL
+* CentOS/RHEL 6 and 7
 * CloudLinux OS 6 and 7
 
 **Virtualization**
 
-* OpenVZ - Works for Virtuozzo 7 with kernel 3.10.0-327.10.1.vz7.12.8 or later
+* OpenVZ - Works for Virtuozzo 7
 
 **Hardware**
 
@@ -35,6 +34,7 @@ ImunifyAV provides malware scanning features for cPanel and DirectAdmin control 
 
 * cPanel
 * DirectAdmin (Ubuntu support is coming soon)
+* [No hosting panel systems](/stand_alone_mode/)
 
 **Required browsers**
 
