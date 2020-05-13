@@ -62,7 +62,7 @@ wget https://repo.imunify360.cloudlinux.com/defence360/imav-deploy.sh
 bash imav-deploy.sh
 ```
 
-To install ImunifyAV beta version add argument --beta . For example:
+To install ImunifyAV beta version add argument `--beta`. For example:
 
 ```
 bash imav-deploy.sh --beta
@@ -89,6 +89,7 @@ To view available options for installation script run:
 ```
 bash imav-deploy.sh -h
 ```
+
 In a case of registration key is passed later, then you can register an activation key via the `imunify-antivirus` command:
 
 ```
@@ -105,7 +106,7 @@ To upgrade ImunifyAV run the command:
 yum update imunify-antivirus
 ```
 
-To updade ImunifyAV beta version run the command:
+To update ImunifyAV beta version run the command:
 
 ```
 yum update imunify-antivirus --enablerepo=imunify360-testing
@@ -114,6 +115,22 @@ yum update imunify-antivirus --enablerepo=imunify360-testing
 To update ImunifyAV on Ubuntu run the command:
 
 ```
+apt-get update
+apt-get install --only-upgrade imunify-antivirus
+```
+
+To update ImunifyAV beta on Ubuntu 16.04 LTS run the command:
+
+```
+echo 'deb https://repo.imunify360.cloudlinux.com/imunify360/ubuntu-testing/16.04/ xenial main'  > /etc/apt/sources.list.d/imunify360-testing.list
+apt-get update
+apt-get install --only-upgrade imunify-antivirus
+```
+
+To update ImunifyAV beta on Ubuntu 18.04 run the command:
+
+```
+echo 'deb https://repo.imunify360.cloudlinux.com/imunify360/ubuntu-testing/18.04/ bionic main'  > /etc/apt/sources.list.d/imunify360-testing.list
 apt-get update
 apt-get install --only-upgrade imunify-antivirus
 ```
@@ -655,6 +672,10 @@ The table can be sorted by detection date (Detected), file path (File), Reason, 
 | ![ImunifyAV+ End User UI → Files tab](/images/av+userfiles_zoom70.png) |
 |:--:| 
 | *ImunifyAV+ End User UI → Files tab* |
+
+If a user is allowed by an administrator to scan his files, he can see the Start scanning button.
+
+![](/images/StartScanningAV.png)
 
 ### History
 
