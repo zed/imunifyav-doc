@@ -1,57 +1,68 @@
 # Command-Line Interface
 
+#### Description
+
+ImunifyAV(+) command-line interface (CLI) makes working with ImunifyAV(+) basics and features from your terminal even simpler.
+
 ::: tip Note
 CLI commands are available only for cPanel and DirectAdmin control panels. Plesk and ISPmanager CLI support is coming soon.
 :::
 
-For access to ImunifyAV agent features from the command-line interface, use the following command:
+#### Usage
+
+For access to the ImunifyAV agent features from the command-line interface, use the following command:
 
 ```
 imunify-antivirus
 ```
 
- **Optional arguments:**
-| | |
-|-|-|
-| `-h`, `--help `| show this help message and exit|
-| `--console-log-level {ERROR,WARNING,INFO,DEBUG}` | level of logging input to the console|
-
-**Basic usage:**
+Basic usage:
 
 ```
 imunify-antivirus [command] [--option1] [--option2]... 
 ```
 
+#### Options
+
+The following options are available for all commands.
+
+| | |
+|-|-|
+|`-h`, `--help `|show this help message and exit|
+|`--console-log-level {ERROR,WARNING,INFO,DEBUG}`|level of logging input to the console|
+|`--json`|returns data in JSON format|
+|`--verbose, -v`|allows to return data in good-looking view if option `--json` is used|
+
+#### Examples
+
+1. This command allows to show help for the `start` command:
+    ```
+    imunify-antivirus start [-h]
+    ```
+
+
 **Available commands:**
 
 | | |
 |-|-|
-| `start`| start the agent|
-| `add-sudouser`| add a user with root privileges|
-| `checkdb`| check database integrity|
-| `check-domains` | send domain list check|
-| `config update` | update configuration file via CLI|
-| `delete-sudouser`| remove a user with root privileges|
-| `doctor`| collect info about the system and send it to ImunifyAV|
-| `infected-domains` | returns infected domain list|
-| `register`| register the agent|
-| `rstatus`| send a query to server to the check if the license is valid|
-| `unregister`| unregister the agent|
-| `update`| update malware signatures|
-| `update-license`| force license update|
-| `version`| show version|
-| `feature-management`| manage ImunifyAV features available for users|
-| `malware`| malware-related operations|
+|[`add-sudouser`](/cli/#add-sudouser)|add a user with root privileges|
+|[`checkdb`](/cli/#сheckdb)|check database integrity|
+|[`check-domains`](/cli/#check-domains)|send domain list check|
+|[`config update`](/cli/#config-update)|update configuration file via CLI|
+|[`delete-sudouser`](/cli/#delete-sudouser)|remove a user with root privileges|
+|[`doctor`](/cli/#doctor)|collect info about the system and send it to ImunifyAV(+)|
+|[`infected-domains`](/cli/#infected-domains)|returns infected domain list|
+|[`feature-management`](/cli/#feature-management)|manage ImunifyAV(+) features available for users|
+|[`hooks`](/cli/#hooks)|hooks-related operations|
+|[`malware`](/cli/#malware)|malware-related operations|
+|[`register`](/cli/#register)|register the agent|
+|[`rstatus`](/cli/#rstatus)|send a query to server to the check if the license is valid|
+|[`start`](/cli/#start)|start the agent|
+|[`unregister`](/cli/#unregister)|unregister the agent|
+|[`update`](/cli/#update)|update malware signatures|
+|[`update-license`](/cli/#update-license)|force license update|
+|[`version`](/cli/#version)|show version|
 
-## Start
- 
-This command allows to run the agent.
-
-**Usage:**
-
-```
-imunify-antivirus start [--optional arguments]
-```
 
 ## Add-sudouser
 
@@ -93,13 +104,6 @@ Allows to send domains list to check on ImunifyAV central server. This command r
 imunify-antivirus check-domains [--optional arguments]
 ```
 
-**Optional arguments**:
-
-| | |
-|-|-|
-|`-h, --help`|show this help message|
-|`--json`|return data in JSON format|
-|`--verbose, -v`|allows to return data in good-looking view if option `--json` is used|
 
 
 ## Config update
@@ -124,30 +128,6 @@ imunify-antivirus config update ‘{"MALWARE_SCAN_INTENSITY": {"cpu": 5}}’
 ```
 
 
-#### How to apply changes from CLI
-
-In order to apply changes via command-line interface (CLI), you can use the following command:
-
-```
-imunify-antivirus config update '{"SECTION": {"parameter": value}}'
-```
-
-For example, if you want to set `MALWARE_SCAN_INTENSITY.cpu = 5` from a command line, then you should execute the following command:
-
-```
-imunify-antivirus config update '{"MALWARE_SCAN_INTENSITY": {"cpu": 5}}'
-imunify-antivirus config update '{"MALWARE_SCANNING": {"rapid_scan": true}}'
-```
-
-It is also possible to apply several parameters at once.
-
-For example:
-
-```
-imunify-antivirus config update '{"MALWARE_SCAN_INTENSITY": {"cpu": 5, "io": 7}}'
-```
-
-
 ## Delete-sudouser
 
 This command removes a user with root privileges from the server.
@@ -168,88 +148,22 @@ This command collects information about ImunifyAV state, generates the report an
 imunify-antivirus doctor [--optional arguments]
 ```
 
-## Register
+## Infected-domains
 
-Allows to register and activate ImunifyAV. You can use it in case if ImunifyAV was not activated during installation process or in case if activation key of the ImunifyAV was changed for any reason. If you do not know what is an activation key or have any problem with it then, please, read [Installation Guide](/imunifyav/#installation-guide) or [contact our support team](https://cloudlinux.zendesk.com/hc/requests/new).
+Allows to retrieve infected domains list.
 
-**Usage:**
- 
+**Usage**:
+
 ```
-imunify-antivirus register [--optional arguments] [KEY]
+imunify-antivirus infected-domains [-h] [--optional arguments]
 ```
 
-`KEY` is a positional argument:
+Optional arguments for `list`:
 
 | | |
 |-|-|
-|`KEY`| register with activation key (use `IPL` to register by IP)|
-
-If you will use this command without the `KEY` argument, then it will try to register and activate current activation key.
-
-**Example 1:**
-The following command will register and activate Imunify360 with the provided activation key:
-
-```
-imunify-antivirus register IMAV250jjRRjowbjk56dGN
-```
-
-**Example 2:**
-If you have an IP-based license, you can use `IPL` argument to register and activate ImunifyAV:
-
-```
-imunify-antivirus register IPL
-```
-
-## Rstatus
-
-Allows to check if ImunifyAV server license is valid.
-
-**Usage:**
-
-```
-imunify-antivirus rstatus [--optional arguments]
-```
-
-## Unregister
-
-
-Allows to unregister and disable ImunifyAV on the server.
-
-**Usage:**
-
-```
-imunify-antivirus unregister [--optional arguments]
-```
-
-## Update
-
-This command allows updating ImunifyAV malware signatures.
-
-**Usage:**
-
-```
-imunify-antivirus update [--optional arguments] signatures
-```
-
-## Update-license
-
-This command force updating the ImunifyAV license.
-
-**Usage:**
-
-```
-imunify-antivirus update-license [--optional arguments]
-```
-
-## Version
-
-Allows to show the actual ImunifyAV version installed on the server.
-
-**Usage:**
-
-```
-imunify-antivirus version [--optional arguments]
-```
+|`--limit`|Limits the output with the specified number of domains.<br>Must be a number greater than zero. By default, equals 100.|
+|`--offset`|Offset for pagination. By default, equals 0.|
 
 ## Feature-management
 
@@ -292,6 +206,10 @@ The following command enables malware cleanup feature for the `user1`:
 ```
 imunify-antivirus feature-management enable --feature cleanup --users user1
 ```
+
+## Hooks
+
+Hooks-related command description is available [here](/imunifyav/#hooks-cli)
 
 ## Malware 
 
@@ -386,28 +304,126 @@ The optional arguments for `on-demand start` are:
 imunify-antivirus malware on-demand start --path /home/<username>/public_html/
 ```
 
-## Infected-domains
 
-Allows to retrieve infected domains list.
 
-**Usage**:
+## Register
 
+Allows to register and activate ImunifyAV. You can use it in case if ImunifyAV was not activated during installation process or in case if activation key of the ImunifyAV was changed for any reason. If you do not know what is an activation key or have any problem with it then, please, read [Installation Guide](/imunifyav/#installation-guide) or [contact our support team](https://cloudlinux.zendesk.com/hc/requests/new).
+
+**Usage:**
+ 
 ```
-imunify-antivirus infected-domains [-h] [--optional arguments]
+imunify-antivirus register [--optional arguments] [KEY]
 ```
 
-Optional arguments for `list`:
+`KEY` is a positional argument:
 
 | | |
 |-|-|
-|`--json`|Returns data in JSON format.|
-|`--limit`|Limits the output with the specified number of domains.<br>Must be a number greater than zero. By default, equals 100.|
-|`--offset`|Offset for pagination. By default, equals 0.|
-|`--verbose, -v`|Allows to return data in a good-looking view if option `--json` is used.|
+|`KEY`| register with activation key (use `IPL` to register by IP)|
+
+If you will use this command without the `KEY` argument, then it will try to register and activate current activation key.
+
+**Example 1:**
+The following command will register and activate Imunify360 with the provided activation key:
+
+```
+imunify-antivirus register IMAV250jjRRjowbjk56dGN
+```
+
+**Example 2:**
+If you have an IP-based license, you can use `IPL` argument to register and activate ImunifyAV:
+
+```
+imunify-antivirus register IPL
+```
+
+## Rstatus
+
+Allows to check if ImunifyAV server license is valid.
+
+**Usage:**
+
+```
+imunify-antivirus rstatus [--optional arguments]
+```
+
+## Start
+ 
+This command allows to run the agent.
+
+**Usage:**
+
+```
+imunify-antivirus start [--optional arguments]
+```
 
 
-## Hooks
 
-Hooks-related command description is available [here](/imunifyav/#hooks-cli)
+## Unregister
+
+
+Allows to unregister and disable ImunifyAV on the server.
+
+**Usage:**
+
+```
+imunify-antivirus unregister [--optional arguments]
+```
+
+## Update
+
+This command allows updating ImunifyAV malware signatures.
+
+**Usage:**
+
+```
+imunify-antivirus update [--optional arguments] signatures
+```
+
+## Update-license
+
+This command force updating the ImunifyAV license.
+
+**Usage:**
+
+```
+imunify-antivirus update-license [--optional arguments]
+```
+
+## Version
+
+Allows to show the actual ImunifyAV version installed on the server.
+
+**Usage:**
+
+```
+imunify-antivirus version [--optional arguments]
+```
+
+
+## How to apply changes from CLI
+
+In order to apply changes via command-line interface (CLI), you can use the following command:
+
+```
+imunify-antivirus config update '{"SECTION": {"parameter": value}}'
+```
+
+For example, if you want to set `MALWARE_SCAN_INTENSITY.cpu = 5` from a command line, then you should execute the following command:
+
+```
+imunify-antivirus config update '{"MALWARE_SCAN_INTENSITY": {"cpu": 5}}'
+imunify-antivirus config update '{"MALWARE_SCANNING": {"rapid_scan": true}}'
+```
+
+It is also possible to apply several parameters at once.
+
+For example:
+
+```
+imunify-antivirus config update '{"MALWARE_SCAN_INTENSITY": {"cpu": 5, "io": 7}}'
+```
+
 
 <Disqus/>
