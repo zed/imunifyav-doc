@@ -1,10 +1,12 @@
 # Stand-alone version of ImunifyAV+
 
-::: tip Note
-Prior to version 4.3, ImunifyAV supported cPanel and DirectAdmin panels only. Starting from v4.3, ImunifyAV could be run on any CloudLinux OS, CentoOS 6/7 and RHEL 6/7 systems that have a required set of prerequisites. It doesn’t require any hosting panel installed, and can be run with any panel, as the UI is implemented using the Single Page Application paradigm.
-::: 
-
 Below you can find the steps to install and run ImunifyAV, in stand-alone mode, or within any hosting panel.
+
+**Operating system**
+
+* CentOS 6/7/8
+* RHEL 6/7
+* CloudLinux OS
 
 There are some basic steps to run ImunifyAV as a stand-alone application:
 

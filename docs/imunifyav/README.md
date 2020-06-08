@@ -20,7 +20,13 @@ ImunifyAV provides malware scanning features for cPanel and DirectAdmin control 
 
 * CentOS/RHEL 6 and 7
 * CloudLinux OS 6 and 7
-* Ubuntu 16.04 (LTS only) and 18.04 in [standalone mode](/stand_alone_mode/)
+* Ubuntu 16.04 (LTS only) and 18.04 in [stand-alone mode](/stand_alone_mode/)
+* CentOS 8 with Plesk
+* CentOS 8 with DirectAdmin
+* CentOS 8 in [stand-alone mode](/stand_alone_mode/)
+* CloudLinux OS 8 with DirectAdmin
+* CloudLinux OS 8 in s[stand-alone mode](/stand_alone_mode/)
+
 
 **Virtualization**
 
