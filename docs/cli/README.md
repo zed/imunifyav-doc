@@ -284,99 +284,200 @@ The following command shows existing event handlers:
 imunify-antivirus hook list
 ```
 
-## Malware 
 
-Allows to manage malware-related operation.
+## Malware
 
-**Usage:**
+</div>
+
+Allows to manage malware options.
+
+**Usage**:
+
+<div class="notranslate">
 
 ```
-imunify-antivirus malware [command] [--argument]...
+imunify-antivirus malware [command] [--optional arguments]
 ```
 
-`command` can be one of the following:
+</div>
+
+Available commands:
 
 | | |
 |-|-|
-| `cleanup status`| show the status of the cleanup process|
-| `history list`| lists the complete history of all malware-related incidents/actions (optional arguments available)|
-| `ignore`| malware Ignore List operations|
-| `malicious`| malware Malicious List operations|
-| `on-demand`| on-demand Scanner operations|
-| `suspicious`| malware Suspicious List operations|
-
-The optional arguments are:
-
-| | |
-|-|-|
-| `--order-by [ORDER_BY [ORDER_BY ...]]`| sorting order|
-| `--limit LIMIT`| limits the output; must be a number greater than zero (by default, equals 100)|
-| `--since SINCE`| start date|
-| `--offset OFFSET`| offset for pagination (by default, equals 0)|
-| `--user USER`| returns results for a chosen user|
-| `--by-status [BY_STATUS [BY_STATUS ...]]`|return items with selected status|
-| `--by-scan-id BY_SCAN_ID`|return items with selected ID|
-| `--items ITEMS`|return selected items|
-| `--to TO`| end date|
-| `--search SEARCH`| search query|
-
-
-`action` is the second positional argument for `ignore` and can be one of the following:
+|<span class="notranslate">`ignore`</span>|malware Ignore List operations|
+|<span class="notranslate">`malicious`</span>|malware Malicious List operations|
+|<span class="notranslate">`on-demand`</span>|on-demand Scanner operations|
+|<span class="notranslate">`suspicious`</span>|malware Suspicious List operations|
+|<span class="notranslate">`cleanup status`</span>|show the status of the cleanup process|
+|<span class="notranslate">`history list`</span>|lists the complete history of all malware-related incidents/actions (optional arguments available)|
+|<span class="notranslate">`rebuild patterns`</span>|allows to save changes after editing watched and excluded patterns for Malware Scanner. See details [here](/faq_and_known_issues/#_22-how-to-edit-watched-and-excluded-patterns-for-malware-scanner).|
+|<span class="notranslate">`user`</span>|allows to perform Malware Scanner operations for a user|
+ 
+Optional arguments:
 
 | | |
 |-|-|
-|`add`|add a file PATH to the Ignore List|
-|`delete`|delete a file PATH from the Ignore List|
-|`list`|shows Ignore List entries (optional arguments apply)|
-
-`command2` is the second positional argument for the `malicious` command and can be one of the following:
-
-| | |
-|-|-|
-|`cleanup`|clean up infected ITEMS for a USER|
-|`cleanup-all`|clean up all files that have been detected as infected for all users|
-|`restore-original`|restore the original (malicious/infected) file to its original location|
-|`delete`|delete malicious/infected files|
-|`list`|list malicious/infected files|
-|`move-to-ignore`|move a malicious list entry to the (malware) Ignore List|
-|`remove-from-list`|remove malicious/infected files from the Malicious List|
+|<span class="notranslate">`--limit LIMIT`</span>|Limits the output with the specified number of domains.<br>Must be a number greater than zero. By default, equals 100.|
+|<span class="notranslate">`--offset OFFSET`</span>|Offset for pagination. By default, equals 0.|
+|<span class="notranslate">`--since SINCE`</span>|Start date.|
+|<span class="notranslate">`--to TO`</span>|End date.|
+|<span class="notranslate">`--user USER`</span>|Returns results for a chosen user.|
+|<span class="notranslate">`--order-by [ORDER_BY [ORDER_BY ...]]`</span>|Sorting order.|
+|<span class="notranslate">`--by-status [BY_STATUS [BY_STATUS ...]]`</span>|Return items with selected status.|
+|<span class="notranslate">`--by-scan-id BY_SCAN_ID`</span>|Return items with selected ID.|
+|<span class="notranslate">`--items ITEMS`</span>|Return selected items.|
+|<span class="notranslate">`--search SEARCH`</span>|Search query.|
 
 
-`action` is the second positional argument for `on-demand` and can be one of the following:
+<span class="notranslate">`action`</span> is the second positional argument for <span class="notranslate">`ignore`</span> and can be one of the following:
 
 | | |
 |-|-|
-|`list`|list all on-demand scans performed|
-|`start --path PATH`|starts an on-demand scan for a specified PATH|
-|`status`|show the on-demand malware scanner status|
-|`stop`|stop on-demand malware scanner process|
+|<span class="notranslate">`add`</span>|add file PATHS to the <span class="notranslate">Ignore List</span>|
+|<span class="notranslate">`delete`</span>|delete file PATHS from the <span class="notranslate">Ignore List</span>|
+|<span class="notranslate">`list`</span>|shows <span class="notranslate">Ignore List</span> entries (optional arguments apply)|
 
-The optional arguments for `on-demand start` are:
+where PATHS are the absolute paths to files or folders divided by a whitespace.
+
+<span class="notranslate">`command2`</span> is the second positional argument for the <span class="notranslate">`malicious`</span> command and can be one of the following:
+
+| | |
+|-|-|
+|<span class="notranslate">`cleanup`</span>|clean up infected ITEMS for a USER|
+|<span class="notranslate">`cleanup-all`</span>|clean up all files that have been detected as infected for all users|
+|<span class="notranslate">`restore-original`</span>|restore the original (malicious/infected) file to its original location|
+|<span class="notranslate">`delete`</span>|delete malicious/infected files|
+|<span class="notranslate">`list`</span>|list malicious/infected files|
+|<span class="notranslate">`move-to-ignore`</span>|move a <span class="notranslate">Malicious List</span> entry to the (malware) <span class="notranslate">Ignore List</span>|
+|<span class="notranslate">`remove-from-list`</span>|remove malicious/infected files from the <span class="notranslate">Malicious List</span>|
+|<span class="notranslate">`restore-from-backup`</span>|restore a clean version of infected file from backup|
+
+
+<span class="notranslate">`action`</span> is the second positional argument for <span class="notranslate">`on-demand`</span> and can be one of the following:
+
+| | |
+|-|-|
+|<span class="notranslate">`list`</span>|list all on-demand scans performed|
+|<span class="notranslate">`start --path PATH`</span>|starts an on-demand scan for a specified PATH|
+|<span class="notranslate">`status`</span>|show the on-demand malware scanner status|
+|<span class="notranslate">`stop`</span>|stop on-demand malware scanner process|
+|<span class="notranslate">`queue put`</span>|put file PATHS to the queue for on-demand scan|
+|<span class="notranslate">`queue remove`</span>|remove scans from the queue for on-demand scan|
+
+The optional arguments for <span class="notranslate">`on-demand start`</span> and <span class="notranslate">`on-demand queue put`</span> are:
 
 | |
 |-|
-|`--ignore-mask IGNORE_MASK`|
-|`--follow-symlinks`|
-|`--no-follow-symlinks`|
-|`--file-mask FILE_MASK`|
-|`--intensity {low,moderate,high}`|
+|<span class="notranslate">`--ignore-mask IGNORE_MASK`</span>|
+|<span class="notranslate">`--follow-symlinks`</span>|
+|<span class="notranslate">`--no-follow-symlinks`</span>|
+|<span class="notranslate">`--file-mask FILE_MASK`</span>|
+|<span class="notranslate">`--intensity-cpu {1 to 7}`</span> 1 means the lowest intensity, 7 means the highest intensity|
+|<span class="notranslate">`--intensity-io {1 to 7}`</span> 1 means the lowest intensity, 7 means the highest intensity|
 
-`action` is the second positional argument for `suspicious` and can be one of:
+<span class="notranslate">`action`</span> is the second positional argument for <span class="notranslate">`suspicious`</span> and can be one of:
 
 | | |
 |-|-|
-|`delete`|delete a Suspicious List entry|
-|`list`|obtain the list of Suspicious List entries|
-|`move-to-ignore`|move a Suspicious List entry to the (malware) Ignore List|
+|<span class="notranslate">`delete`</span>|delete a <span class="notranslate">Suspicious List</span> entry|
+|<span class="notranslate">`list`</span>|obtain the list of <span class="notranslate">Suspicious List</span> entries|
+|<span class="notranslate">`move-to-ignore`</span>|move a <span class="notranslate">Suspicious List</span> entry to the (malware) <span class="notranslate">Ignore List</span>|
 
-**Example**
 
-1. The following command starts on-demand scanner for the path specified after the `start` command:
+<span class="notranslate">`action`</span> is the second positional argument for <span class="notranslate">`user`</span> and can be one of the following:
+
+| | |
+|-|-|
+|<span class="notranslate">`cleanup USER`</span>|clean all infected files for a user|
+|<span class="notranslate">`restore-original USER`</span>|restore all original files for a user|
+|<span class="notranslate">`list`</span>|list all users and their current infection status|
+|<span class="notranslate">`scan`</span>|scan all users|
+
+
+**Examples**
+
+1. The following command starts on-demand scanner for the path specified after the <span class="notranslate">`start`</span> command:
+
+<div class="notranslate">
 
 ```
 imunify-antivirus malware on-demand start --path /home/<username>/public_html/
 ```
+</div>
 
+2. The following command shows the example of the <span class="notranslate">`ignore-mask`</span> usage when you have to scan all `d*` folders except for the <span class="notranslate">`dixon77w.com`</span> and <span class="notranslate">`dunnrrr.com`</span>:
+
+<div class="notranslate">
+
+```
+imunify-antivirus malware on-demand start --path='/var/www/vhosts/d*' --ignore-mask='/var/www/vhosts/dixon77w.com/*,/var/www/vhosts/dunnrrr.com/*'
+```
+</div>
+
+3. The following command adds on-demand scans for the selected path(s) to the scan queue
+
+<div class="notranslate">
+
+```
+imunify-antivirus malware on-demand queue put "/home/user1/some folder" "/home/user2" --file-mask="*.php"
+```
+</div>
+
+4. The following command removes the selected scans from the scan queue
+
+<div class="notranslate">
+
+```
+imunify-antivirus malware on-demand list        # get scan_ids for the selected scans from the malicious list
+imunify-antivirus malware on-demand queue remove 84f043211dc045ae8e6d641f3b9fdb0a 8c4ee39d4d8f43e296e893940c8e791a
+```
+</div>
+
+5. The following command stops the on-demand Malware Scanner process
+
+<div class="notranslate">
+
+```
+imunify-antivirus malware on-demand stop
+```
+</div>
+
+6. The following command stops the on-demand Malware Scanner process and clears the scan queue
+
+<div class="notranslate">
+
+```
+imunify-antivirus malware on-demand stop --all
+```
+</div>
+
+7. The following command shows how to get an extended list of malicious files for a particular user. By default, a limit value equals to 50
+
+<div class="notranslate">
+
+```
+imunify-antivirus malware malicious list --user cltest --limit 500
+```
+</div>
+
+8. The following command adds the specified path to the Ignore List
+
+<div class="notranslate">
+
+```
+imunify-antivirus malware ignore add /home/user1/public_html/ "/home/some user/public_html/index.php"
+```
+</div>
+
+9. The following command lists all users and their current infection status
+
+<div class="notranslate">
+
+```
+imunify-antivirus malware user list
+```
+</div>
 
 
 ## Register
