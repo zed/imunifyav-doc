@@ -74,6 +74,16 @@ This command adds a user with root privileges to the server.
 imunify-antivirus add-sudouser <userID> [--optional arguments]
 ```
 
+**Example:**
+
+This command adds the user 11XXX111 with root privileges to the server:
+
+
+```
+imunify-antivirus add-sudouser 11XXX111
+```
+
+
 ## Сheckdb
 
 Checks database integrity. In case database is corrupt, then this command saves backup copy of the database at `/var/imunifyav` and tries to restore integrity of the original database.
@@ -86,6 +96,14 @@ If this command cannot restore database integrity, then it will destroy the orig
 
 ```
 imunify-antivirus checkdb [--optional arguments]
+```
+
+**Example:**
+
+The following command checks the database integrity:
+
+```
+imunify-antivirus checkdb
 ```
 
 ## Check-domains
@@ -104,6 +122,13 @@ Allows to send domains list to check on ImunifyAV central server. This command r
 imunify-antivirus check-domains [--optional arguments]
 ```
 
+**Example:**
+
+The following command sends the domains list for a check to the Imunify central server:
+
+```
+imunify-antivirus check-domains
+```
 
 
 ## Config update
@@ -138,6 +163,14 @@ This command removes a user with root privileges from the server.
 imunify-antivirus delete-sudouser <userID> [--optional arguments]
 ```
 
+**Example:**
+
+The following command removes the user 11XXX111 with root privileges from the server.
+
+```
+imunify-antivirus delete-sudouser 11XXX111
+```
+
 ## Doctor
 
 This command collects information about ImunifyAV state, generates the report and sends it to the ImunifyAV Support Team. This command can be used in case of any troubles or issues with ImunifyAV. This command will generate a key to be sent to the ImunifyAV Support Team. With that key the ImunifyAV Support Team can help with any problem as fast as possible.
@@ -164,6 +197,15 @@ Optional arguments for `list`:
 |-|-|
 |`--limit`|Limits the output with the specified number of domains.<br>Must be a number greater than zero. By default, equals 100.|
 |`--offset`|Offset for pagination. By default, equals 0.|
+
+**Example:**
+
+The following command displays the results of the `check-domains` command:
+
+```
+imunify-antivirus infected-domains
+```
+
 
 ## Feature-management
 
@@ -209,7 +251,38 @@ imunify-antivirus feature-management enable --feature cleanup --users user1
 
 ## Hooks
 
-Hooks-related command description is available [here](/imunifyav/#hooks-cli)
+You can read more about hooks [here](/imunifyav/#hooks-cli).
+
+This command allows to manage hooks.
+
+**Usage:**
+
+```
+imunify-antivirus hook [command] --event [event_name|all] [--path </path/to/hook_script>]
+```
+
+
+`command` can be one of the following:
+
+| | |
+|-|-|
+|`add`|register a new event handler|
+|`delete`|unregister existing event handler|
+|`list`|show existing event handlers|
+|`add-native`|register a new native event handler|
+
+| | |
+|-|-|
+|`--event [event_name|all]`|defines a particular event that invokes<br>a registered handler as opposed to all keyword|
+|`--path </path/to/hook_script>`|shall contain a valid path to a handler of the event,<br>it shall be any executable or Python Native event handlers<br>that agent will run upon a registered event|
+
+**Example:**
+
+The following command shows existing event handlers:
+
+```
+imunify-antivirus hook list
+```
 
 ## Malware 
 
