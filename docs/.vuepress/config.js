@@ -129,7 +129,8 @@ module.exports = {
               "/cli/",
               "/stand_alone_mode/",
               "/imunifyav_for_plesk/",
-              "/imunifyav_for_ispmanager/"
+              "/imunifyav_for_ispmanager/",
+              "/faq_and_known_issues/"
             ]
           }
         ]
