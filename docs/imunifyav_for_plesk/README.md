@@ -297,6 +297,17 @@ Thanks!
 You can find the ImunifyAV log file here: `/usr/local/psa/var/modules/revisium-antivirus/revisium-antivirus-local.log`
 
 
+### Dashboard says "scan failed" with no related error message
+
+Sometimes you can face the issue that during scanning the scan process failed on one domain. And Dashboard says "scan failed" without an error message.
+
+In most cases, the site is large and the scan was terminated due to timeout.
+
+You can try to check records in the `/usr/local/psa/admin/logs/panel.log` and in the `/usr/local/psa/var/modules/revisium-antivirus/revisium-antivirus-local.log` log files.
+
+Please consider increasing the `Scanning timeout` value in the ImunifyAV settings and re-run the scan engine.
+
+
 ## Troubleshooting
 
 ### I payed for the extension, but it is not yet Premium
