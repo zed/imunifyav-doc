@@ -569,10 +569,13 @@ Allows to set up automatic, scheduled, background scanning of user accounts.
 
 * **Run scanning** — select the desired period:
   * Never
-  * Daily
-  * Weekly
+  * Daily*
+  * Weekly*
   * Monthly
 
+:::warning Note
+The `Daily` and `Weekly` options are available for ImunifyAV+ and Imunify360 only.
+:::
 
 | <img src="/images/SettingsBackgroundScanning1.png" alt="SettingsBackgroundScanning1" width="512" height="176"/> |
 |:--:| 
