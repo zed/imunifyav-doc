@@ -231,7 +231,7 @@ imunify-antivirus feature-management [command] [--optional argument]...
 
 | | |
 |-|-|
-|<span class="notranslate">`[--feature cleanup]`</span>|enable/disable <span class="notranslate">Malware Cleanup</span>|
+|<span class="notranslate">`[--feature av]`</span>|enable/disable <span class="notranslate">Malware Cleanup</span>|
 <span class="notranslate">`[--feature proactive]`</span>|enable/disable <span class="notranslate">Proactive Defense</span>|
 | `[--users [USERS [USERS ...]]]`| specifies the list of users which will be affected, otherwise the default value will be changed|
 
@@ -246,7 +246,7 @@ The mandatory argument for the `get` command:
 The following command enables malware cleanup feature for the `user1`:
 
 ```
-imunify-antivirus feature-management enable --feature cleanup --users user1
+imunify-antivirus feature-management enable --feature av --users user1
 ```
 
 ## Hooks
