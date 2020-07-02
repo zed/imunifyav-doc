@@ -1,5 +1,7 @@
 # ImunifyAV(+) for Plesk
 
+[[toc]]
+
 ## General overview
 
 ImunifyAV is an intelligent antivirus and security monitoring tool for websites with one-click automatic malware cleanup, domains reputation monitoring and blacklist status check.
