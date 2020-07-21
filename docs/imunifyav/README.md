@@ -6,7 +6,7 @@ This ImunifyAV documentation is applicable for **cPanel** and **DirectAdmin** co
 :::
 
 * You can find documentation for ImunifyAV for **Plesk** [here](/imunifyav_for_plesk/)
-* You can find documentation for ImunifyAV for **ISPmanager** [here](https://isp.revisium.com/)
+* You can find documentation for ImunifyAV for **ISPmanager** [here](https://docs.ispsystem.com/ispmanager-lite/integrations/integration-with-imunifyav)
 * You can find documentation for **stand-alone (no-panel)** version of ImunifyAV [here](/stand_alone_mode/)
 
 ImunifyAV provides malware scanning features for cPanel and DirectAdmin control panels.
