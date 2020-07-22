@@ -341,7 +341,7 @@ It is possible to use _Advanced_ settings:
 * <span class="notranslate">**Follow symlinks**</span>. Follow all symlinks within the folder to scan. 
 
 :::tip Note
-If ImunifyAV <sup>4.6+</sup> is running on CloudLinux OS, LVE is used to manage scan intensity. If it is running on other operating systems, “nice” is used to control CPU and “ionice” is used when the I/O scheduler is CFQ.
+If ImunifyAV is running on CloudLinux OS, LVE is used to manage scan intensity. If it is running on other operating systems, “nice” is used to control CPU and “ionice” is used when the I/O scheduler is CFQ.
 :::
 
   2. Click _Start_.
@@ -549,7 +549,7 @@ Go to ImunifyAV → Settings tab to set up the behaviour of ImunifyAV scanner. H
   :::
 
   :::tip Note
-  If ImunifyAV <sup>4.6+</sup> is running on CloudLinux OS, LVE is used to manage scan intensity. If it is running on other operating systems, “nice” is used to control CPU and “ionice” is used when the I/O scheduler is CFQ.
+  If ImunifyAV is running on CloudLinux OS, LVE is used to manage scan intensity. If it is running on other operating systems, “nice” is used to control CPU and “ionice” is used when the I/O scheduler is CFQ.
   :::
 
 #### General
@@ -560,7 +560,7 @@ Go to ImunifyAV → Settings tab to set up the behaviour of ImunifyAV scanner. H
 
 * **Automatically send suspicious and malicious files for analysis** – malicious and suspicious files will be sent to the ImunifyAV Team for analysis automatically.
 * **RapidScan** – dramatically speeds up repeated scans based on smart re-scan approach, local result caching and cloud-assisted scan. When you first enable the RapidScan feature, the first scan will run as before. But subsequent scans will see a dramatic speed improvement, anywhere between 5 to 20 times faster. You can find the details here: [https://docs.imunify360.com/features/#rapidscan](https://docs.imunify360.com/features/#rapidscan))
-* **Binary (ELF) malware detection** – this option allows to scans user home directories for malware. It’s disabled in ImunifyAV version 4.4 by default.
+* **Binary (ELF) malware detection** – this option allows to scans user home directories for malware.
   
 Tick required checkboxes and click the _Save changes_ button.
 
@@ -747,7 +747,7 @@ The table can be sorted by Added and Path. By default, it is sorted from newest 
 
 ### Overview
 
-Hooks are introduced starting from ImunifyAV version 4.2 Beta as a script-based interface for various application events. This is a simple and effective way to automate ImunifyAV alerts and event processing.
+Hooks are introduced as a script-based interface for various application events. This is a simple and effective way to automate ImunifyAV alerts and event processing.
 For example, an administrator can have ImunifyAV calling his own script when malicious files are detected or misconfigurations are detected and perform a custom processing or specific actions, for example, create a ticket.
 Hooks are available only via CLI.
 
