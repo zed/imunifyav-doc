@@ -139,4 +139,19 @@ If you face any difficulties during the progress or simply cannot make the agent
 
 and provide the output to our Support Team at [https://cloudlinux.zendesk.com/hc/requests/new](https://cloudlinux.zendesk.com/hc/requests/new).
 
+
+### How to enable/disable the "Start scanning" button for ImunifyAV\AV+
+
+To enable the "Start scanning" button, run the following command: 
+
+```
+# imunify-antivirus config update '{"PERMISSIONS": {"allow_malware_scan": true}}'
+```
+
+To disable the "Start scanning" button, run the following command: 
+
+```
+# imunify-antivirus config update '{"PERMISSIONS": {"allow_malware_scan": false}}'
+```
+
 <Disqus/>

@@ -683,7 +683,7 @@ The table can be sorted by detection date (Detected), file path (File), Reason, 
 |:--:| 
 | *ImunifyAV+ End User UI → Files tab* |
 
-If a user is allowed by an administrator to scan his files, he can see the Start scanning button.
+If a user is allowed by an administrator to scan his files, he can see the *Start scanning* button. See also: [How to enable/disable the "Start scanning" button for ImunifyAV\AV+](/faq_and_known_issues/#how-to-enable-disable-the-start-scanning-button-for-imunifyav-av).
 
 ![](/images/StartScanningAV.png)
 
