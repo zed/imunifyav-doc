@@ -625,7 +625,7 @@ Each hook can be configured from the UI and the [CLI](/cli/). Each hook type has
 
 :::tip Notes
 * The hook script field accepts a fully qualified path
-* The hook script requires “execution” (+x) permissions to be set rework
+* The hook script requires “execution” (+x) permissions to be set to work
 * Email notifications available in Imunify360
 :::
 

@@ -506,7 +506,7 @@ Change period for SCRIPT hook for REALTIME_MALWARE_FOUND event to 1 minute:
 
 :::tip Notes
 * The hook script field accepts a fully qualified path
-* The hook script requires “execution” (+x) permissions to be set rework
+* The hook script requires “execution” (+x) permissions to be set to work
 * Email notifications available in Imunify360
 :::
 
