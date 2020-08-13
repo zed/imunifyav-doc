@@ -36,6 +36,13 @@ ui_path = /var/www/vhosts/imav/imav.example-hosting.com/html/imav
 
 ImunifyAV will automatically copy UI files there during installation/upgrade.
 
+```
+[paths]
+ui_path_owner = panel_user:web_server_group
+```
+
+This allows executing `chown` to that owner for files after installation. The parameter is optional, if it is absent, `chown` doesn't execute.
+
 :::tip Note
 Ensure that the domain you are going to use for the ImunifyAV web-based UI refers to this path, and that there are no other scripts or files under `ui_path`, as they might be overridden by the ImunifyAV installation.
 :::

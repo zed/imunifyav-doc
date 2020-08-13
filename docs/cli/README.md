@@ -55,6 +55,7 @@ The following options are available for all commands.
 |[`feature-management`](/cli/#feature-management)|manage ImunifyAV(+) features available for users|
 |[`hooks`](/cli/#hooks)|hooks-related operations|
 |[`malware`](/cli/#malware)|malware-related operations|
+|[`notifications-config`](/cli/#notifications-config)|allows to update notifications in the configuration file via CLI|
 |[`register`](/cli/#register)|register the agent|
 |[`rstatus`](/cli/#rstatus)|send a query to server to the check if the license is valid|
 |[`start`](/cli/#start)|start the agent|
@@ -476,6 +477,38 @@ imunify-antivirus malware ignore add /home/user1/public_html/ "/home/some user/p
 imunify-antivirus malware user list
 ```
 </div>
+
+
+## Notifications config
+
+Allows to update notifications in the configuration file via CLI.
+
+
+**Usage:**
+
+```
+imunify-antivirus notifications-config update [configuration options]
+```
+
+**Examples:**
+
+Enable hook on the CUSTOM_SCAN_STRTED event:
+
+```
+# imunify-antivirus notifications-config update '{"rules": {"CUSTOM_SCAN_STARTED": {"SCRIPT": {"enabled": true, "scripts": ["/bin/hook"]}}}}'
+```
+
+Change period for SCRIPT hook for REALTIME_MALWARE_FOUND event to 1 minute:
+
+```
+# imunify360-antivirus notifications-config update '{"rules": {"REALTIME_MALWARE_FOUND": {"/scripts/suspend-website.py": {"period": 60}}}}'
+```
+
+:::tip Notes
+* The hook script field accepts a fully qualified path
+* The hook script requires “execution” (+x) permissions to be set rework
+* Email notifications available in Imunify360
+:::
 
 
 ## Register
