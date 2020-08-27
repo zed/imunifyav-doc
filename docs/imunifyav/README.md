@@ -445,7 +445,7 @@ The following filters are available:
 The table can be sorted by Added and Path. By default, it is sorted from newest to oldest.
 
 
-### Features Management <Badge text="AV"/>
+### Features Management <Badge text="AV+"/>
 
 Features Management tab allows to enable or disable ImunifyAV features for each customer. Go to ImunifyAV → Features Management tab.
 
