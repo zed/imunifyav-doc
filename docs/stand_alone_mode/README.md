@@ -119,7 +119,7 @@ if `/var/www/vhosts/imav/imav.example-hosting.com/html/imav` is the document roo
 or 
 * `http://imav.example-hosting.com/`
 
-<Disqus/>
+
 
 
 

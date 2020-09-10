@@ -154,4 +154,3 @@ To disable the "Start scanning" button, run the following command:
 # imunify-antivirus config update '{"PERMISSIONS": {"allow_malware_scan": false}}'
 ```
 
-<Disqus/>
