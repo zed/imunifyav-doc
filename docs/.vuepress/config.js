@@ -128,6 +128,7 @@ module.exports = {
             children: [
               "/imunifyav/",
               "/cli/",
+            //  "/config_file_description/",
               "/stand_alone_mode/",
               "/imunifyav_for_plesk/",
               "/imunifyav_for_ispmanager/",
