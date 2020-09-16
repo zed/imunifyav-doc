@@ -12,11 +12,8 @@ In the config file it is possible to set up ImunifyAV(+) configuration. The foll
 <th colspan="2" align="left"><span class="notranslate">MALWARE_SCANNING:</span></th></tr>
 <tr><td><span class="notranslate">default_action: notify</span></td>
 <td># default action on malicious file detected.<br>
-Available options:
 <ul>
-<li><span class="notranslate">notify</span> – do not delete and send email notification</li>
-<li><span class="notranslate">delete</span> – delete malicious file</li>
-<li><span class="notranslate">cleanup</span> – cleanup malicious file</li></ul></td></tr>
+<li><span class="notranslate">notify</span> – do not delete, just notify in the UI (default value)</li></ul></td></tr>
 <tr><td><span class="notranslate">max_signature_size_to_scan: 1048576</span></td>
 <td># max file size to scan in the standard mode; value is set in bytes</td></tr>
 <tr><td><span class="notranslate">max_cloudscan_size_to_scan: 10485760</span></td>
@@ -46,8 +43,8 @@ Available options:
 <td># intensity level for RAM consumption. Minimum value is 1024, default is 2048</td></tr>
 <tr>
 <th colspan="2" align="left"><span class="notranslate">MALWARE_SCAN_SCHEDULE:</span></th></tr>
-<tr><td><span class="notranslate">day_of_month: 1</span></td>
-<td># when the background scan shall start, day of the month. Can be from 1 to 31, the default value is 1 (the next day after installation).</td></tr>
+<tr><td><span class="notranslate">day_of_month: &lt;next day after installation&gt;</span></td>
+<td># when the background scan shall start, day of the month. Can be from 1 to 31, the default value is the &lt;next day after installation&gt;.</td></tr>
 <tr><td><span class="notranslate">day_of_week: 0</span></td>
 <td># when the background scan shall start, day of the week. Can be from 0 to 7 (0 for Sunday, 1 for Monday..., 7 for Sunday (again)), the default value is 0</td></tr>
 <tr><td><span class="notranslate">hour: 3</span></td>
