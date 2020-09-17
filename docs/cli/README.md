@@ -46,7 +46,7 @@ The following options are available for all commands.
 | | |
 |-|-|
 |[`add-sudouser`](/cli/#add-sudouser)|add a user with root privileges|
-|[`checkdb`](/cli/#сheckdb)|check database integrity|
+|[`checkdb`](/cli/#checkdb)|check database integrity|
 |[`check-domains`](/cli/#check-domains)|send domain list check|
 |[`config update`](/cli/#config-update)|update configuration file via CLI|
 |[`delete-sudouser`](/cli/#delete-sudouser)|remove a user with root privileges|
