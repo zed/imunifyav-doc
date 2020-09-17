@@ -84,6 +84,7 @@ This command adds the user 11XXX111 with root privileges to the server:
 imunify-antivirus add-sudouser 11XXX111
 ```
 
+You should receive ```OK``` if successful.
 
 ## Checkdb
 
@@ -131,6 +132,13 @@ The following command sends the domains list for a check to the Imunify central 
 imunify-antivirus check-domains
 ```
 
+In case there are no infected domains found on the server, you will see no output. If there are any, you will get the following output:
+
+```
+'domain1.com'
+'domain2.com'
+```
+
 
 ## Config update
 
@@ -153,6 +161,7 @@ Set the `MALWARE_SCAN_INTENSITY.cpu = 5` configuration option from a command lin
 imunify-antivirus config update ‘{"MALWARE_SCAN_INTENSITY": {"cpu": 5}}’
 ```
 
+The successful output should display the configuration file content.
 
 ## Delete-sudouser
 
@@ -171,6 +180,7 @@ The following command removes the user 11XXX111 with root privileges from the se
 ```
 imunify-antivirus delete-sudouser 11XXX111
 ```
+You should receive ```OK``` if successful.
 
 ## Doctor
 
@@ -180,6 +190,14 @@ This command collects information about ImunifyAV state, generates the report an
  
 ```
 imunify-antivirus doctor [--optional arguments]
+```
+
+The successful output will contain the unique set of symbols, for example:
+
+```
+Please, provide this key:
+SSXX11xXXXxxxxXX.1a1bcd1e-222f-33g3-hi44-5551k5lmn555
+to Imunify360 Support Team
 ```
 
 ## Infected-domains
@@ -207,6 +225,12 @@ The following command displays the results of the `check-domains` command:
 imunify-antivirus infected-domains
 ```
 
+In case there are no infected domains found on the server, you will see no output. If there are any, you will get the following output:
+
+```
+'domain1.com'
+'domain2.com'
+```
 
 ## Feature-management
 
@@ -250,6 +274,14 @@ The following command enables malware cleanup feature for the `user1`:
 imunify-antivirus feature-management enable --feature av --users user1
 ```
 
+If theoperation is successful for the user ```user1```, you will receive the following reply:
+
+```
+failed: []
+succeeded:
+- user1
+```
+
 ## Hooks
 
 You can read more about hooks [here](/imunifyav/#hooks-cli).
@@ -282,8 +314,72 @@ imunify-antivirus hook [command] --event [event_name|all] [--path </path/to/hook
 The following command shows existing event handlers:
 
 ```
-imunify-antivirus hook list
+imunify-antivirus hook list --event all
 ```
+
+If you have any hooks configured, the output will include something similar to this:
+
+```
+Event: malware-detected, Path: /root/directory/IMAVscannereventhooks/malware_detected.py
+```
+
+
+## Login
+
+Allows to get a token which can be used for authentication in stand-alone Imunify UI.
+
+**Usage**:
+
+<div class="notranslate">
+
+```
+imunify-antivirus login [command] [--optional arguments]
+```
+
+</div>
+
+<span class="notranslate">`command`</span> can be one of the following:
+
+| | |
+|-|-|
+|<span class="notranslate">`get`</span>|returns a token for USERNAME (must be executed by root)|
+|<span class="notranslate">`pam`</span>|uses PAM to check the provided credential and returns a token for USERNAME if PASSWORD is correct|
+
+Optional arguments for <span class="notranslate">`get`</span>:
+
+| |
+|-|
+|<span class="notranslate">`--username USERNAME`</span>|
+
+Optional arguments for <span class="notranslate">`pam`</span>:
+
+| |
+|-|
+|<span class="notranslate">`--username USERNAME`</span>|
+|<span class="notranslate">`--password PASSWORD`</span>|
+
+**Example**:
+
+You can use the <span class="notranslate">`login get`</span> command to implement your own authorization mechanism for stand-alone ImunifyAV.
+For example, you can generate tokens for users which are already authorized in your system/panel, and redirect to stand-alone Imunify UI with <span class="notranslate">`?token=<TOKEN>`</span> in URL. (You can also set it in localStorage: <span class="notranslate">`localStorage.setItem('I360_AUTH_TOKEN', '<TOKEN>');`</span>)
+
+<div class="notranslate">
+
+```
+imunify-antivirus login get --username my-user1
+```
+
+</div>
+
+The output will display similar to the following:
+
+<div class="notranslate">
+
+```
+eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MDAyNDQwMTAuMDk5MzE5LCJ1c2VyX3R5cGUiOiJjbGllbnQiLCJ1c2VybmFtZSI6ImNsdGVzdCJ9.V_Q03hYw4dNLX5cewEb_h46hOw96KWBWP0E0ChbP3dA
+```
+
+</div>
 
 
 ## Malware
@@ -460,6 +556,21 @@ imunify-antivirus malware malicious list --user cltest --limit 500
 ```
 </div>
 
+The list of the infected files found will be looking in the following way:
+
+<div class="notranslate">
+
+```
+CLEANED_AT  CREATED     EXTRA_DATA  FILE  HASH  ID  MALICIOUS  SCAN_ID  SCAN_TYPE  SIZE  STATUS  TYPE  USERNAME
+None        1599955297  {}          /home/cltest/public_html/test/TsMeJD.php        275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f  1627  True       1996cd86e6b14b12a1c165e79e3540d9  background  68    found   SMW-SA-05057-eicar.tst-4  cltest   
+None        1599955297  {}          /home/cltest/public_html/test/TZlfnU.php        275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f  1628  True       1996cd86e6b14b12a1c165e79e3540d9  background  68    found   SMW-SA-05057-eicar.tst-4  cltest   
+None        1599955297  {}          /home/cltest/public_html/test/Ke7V8n.php        275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f  1629  True       1996cd86e6b14b12a1c165e79e3540d9  background  68    found   SMW-SA-05057-eicar.tst-4  cltest   
+None        1599955297  {}          /home/cltest/public_html/yoUq0L.php             275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f  1630  True       1996cd86e6b14b12a1c165e79e3540d9  background  68    found   SMW-SA-05057-eicar.tst-4  cltest   
+None        1599955297  {}          /home/cltest/public_html/test/PKiuhY.php        275a021bbfb6489e54d471899f7db9d1663fc695ec2fe2a2c4538aabf651fd0f  1631  True       1996cd86e6b14b12a1c165e79e3540d9  background  68    found   SMW-SA-05057-eicar.tst-4  cltest   
+None        1599955297  {}          /home/cltest/public_html/public_html/Zqrsvh.php  275a021bbfb6489e54d471899f7db9d1663fc695
+```
+</div>
+
 8. The following command adds the specified path to the Ignore List
 
 <div class="notranslate">
@@ -477,6 +588,8 @@ imunify-antivirus malware ignore add /home/user1/public_html/ "/home/some user/p
 imunify-antivirus malware user list
 ```
 </div>
+
+The successful initiation/stopping of a scanning process or adding of ignore directories/files should give you ```OK``` in the output.
 
 
 ## Notifications config
@@ -543,6 +656,9 @@ If you have an IP-based license, you can use `IPL` argument to register and acti
 imunify-antivirus register IPL
 ```
 
+You will get ```OK``` in case the registration is successful.
+
+
 ## Rstatus
 
 Allows to check if ImunifyAV server license is valid.
@@ -553,16 +669,34 @@ Allows to check if ImunifyAV server license is valid.
 imunify-antivirus rstatus [--optional arguments]
 ```
 
-## Start
- 
-This command allows to run the agent.
-
-**Usage:**
+An extended variation (otherwise, you receive ```OK``` if everything is fine with the license registered):
 
 ```
-imunify-antivirus start [--optional arguments]
+imunify-antivirus rstatus --json -v
+{
+  "expiration": null,
+  "id": "SSXX11xXXXxxxxXX",
+  "ip_license": false,
+  "license": {
+    "expiration": null,
+    "id": "SSXX11xXXXxxxxXX",
+    "ip_license": false,
+    "license_type": "imunify-antivirus",
+    "message": " ",
+    "status": true,
+    "upgrade_url": "  ",
+    "user_count": 100,
+    "user_limit": 2147483647
+  },
+  "license_type": "imunify-antivirus",
+  "message": " ",
+  "status": true,
+  "upgrade_url": " ",
+  "user_count": 100,
+  "user_limit": 2147483647,
+  "version": "5.1.2-1"
+}
 ```
-
 
 
 ## Unregister
@@ -576,6 +710,8 @@ Allows to unregister and disable ImunifyAV on the server.
 imunify-antivirus unregister [--optional arguments]
 ```
 
+You should get ```OK``` if successful.
+
 ## Update
 
 This command allows updating ImunifyAV malware signatures.
@@ -585,6 +721,7 @@ This command allows updating ImunifyAV malware signatures.
 ```
 imunify-antivirus update [--optional arguments] signatures
 ```
+You should get ```OK``` if successful.
 
 ## Update-license
 
@@ -596,6 +733,8 @@ This command force updating the ImunifyAV license.
 imunify-antivirus update-license [--optional arguments]
 ```
 
+You should get ```OK``` if successful.
+
 ## Version
 
 Allows to show the actual ImunifyAV version installed on the server.
@@ -605,7 +744,11 @@ Allows to show the actual ImunifyAV version installed on the server.
 ```
 imunify-antivirus version [--optional arguments]
 ```
+You will see the current version in the output:
 
+```
+5.1.2-1
+```
 
 ## How to apply changes from CLI
 
