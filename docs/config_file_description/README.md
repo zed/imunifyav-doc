@@ -10,10 +10,6 @@ In the config file it is possible to set up ImunifyAV(+) configuration. The foll
 <table>
 <tr>
 <th colspan="2" align="left"><span class="notranslate">MALWARE_SCANNING:</span></th></tr>
-<tr><td><span class="notranslate">default_action: notify</span></td>
-<td># default action on malicious file detected.<br>
-<ul>
-<li><span class="notranslate">notify</span> – do not delete, just notify in the UI (default value)</li></ul></td></tr>
 <tr><td><span class="notranslate">max_signature_size_to_scan: 1048576</span></td>
 <td># max file size to scan in the standard mode; value is set in bytes</td></tr>
 <tr><td><span class="notranslate">max_cloudscan_size_to_scan: 10485760</span></td>
@@ -22,8 +18,6 @@ In the config file it is possible to set up ImunifyAV(+) configuration. The foll
 <td># max file size to upload to CloudLinux malware research service; value is set in bytes</td></tr>
 <tr><td><span class="notranslate">detect_elf: False</span></td>
 <td># enable (<span class="notranslate">True</span>) or disable (<span class="notranslate">False</span>) (default value) binary (ELF) malware detection</td></tr>
-<tr><td><span class="notranslate">optimize_realtime_scan: True</span></td>
-<td># enable (<span class="notranslate">True</span>) (default value) or disable (<span class="notranslate">False</span>) the  <a href="https://docs.cloudlinux.com/cloudlinux_os_kernel/#file-change-api" target="_blank">File Change API</a> support to reduce the system load while watching for file changes in comparison with inotify watch</td></tr>
 <tr><td><span class="notranslate">sends_file_for_analysis: True</span></td>
 <td># send (<span class="notranslate">True</span>) (default value) or not (<span class="notranslate">False</span>) malicious and suspicious files to the Imunify team for analysis</td></tr>
 <tr><td><span class="notranslate">cloud_assisted_scan: True</span></td>
@@ -85,7 +79,7 @@ In order to apply changes via command-line interface (CLI), you can use the foll
 <div class="notranslate">
 
 ```
-imunify-antivirus config update ‘{"SECTION": {"parameter": value}}’ 
+imunify-antivirus config update '{"SECTION": {"parameter": value}}'
 ```
 </div>
 
@@ -94,7 +88,7 @@ For example, if you want to set <span class="notranslate">`MALWARE_SCAN_INTENSIT
 <div class="notranslate">
 
 ```
-imunify-antivirus config update ‘{"MALWARE_SCAN_INTENSITY": {"cpu": 5}}’
+imunify-antivirus config update '{"MALWARE_SCAN_INTENSITY": {"cpu": 5}}'
 ```
 </div>
 
