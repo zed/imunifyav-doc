@@ -47,18 +47,6 @@ This allows executing `chown` to that owner for files after installation. The pa
 Ensure that the domain you are going to use for the ImunifyAV web-based UI refers to this path, and that there are no other scripts or files under `ui_path`, as they might be overridden by the ImunifyAV installation.
 :::
 
-:::danger Warning
-The issue fix related to incorrect `integration.conf` file parsing is coming. It will be available to all customers within the next 2 weeks.
-Until that, it is required to list the UI path settings in both lower and upper case, for example:
-
-`/etc/sysconfig/imunify360/integration.conf`
-
-[PATHS]  
-UI_PATH = /srv/www/example.com/public/ImunifyAV
-
-[paths]  
-ui_path = /srv/www/example.com/public/ImunifyAV
-:::
 
 #### How to provide ImunifyAV with an actual list of users (optional)
 
