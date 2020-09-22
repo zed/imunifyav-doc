@@ -10,11 +10,7 @@ Below you can find the steps to install and run ImunifyAV, in stand-alone mode, 
 * CentOS 6/7/8
 * RHEL 6/7
 * CloudLinux OS
-
-**Web servers**
-
-* Apache
-* LiteSpeed
+* Ubuntu 16.04 and 18.04
 
 #### Prerequisites
 
@@ -152,7 +148,7 @@ It should point to an executable file that generates a JSON file similar to the 
 }
 ```
 
-#### How to provide a list of domains for ImunifyAV
+#### How to provide a list of domains for ImunifyAV (optional)
 
 To provide a list of domains for ImunifyAV, specify the script that generates a JSON file in the `/etc/sysconfig/imunify360/integration.conf`:
 
@@ -181,8 +177,6 @@ A JSON file should be similar to the following:
   }
 }
 ```
-
-`web_server_config_path` should point to a path that is added as `IncludeOptional` in this domain's virtual host e.g., `/path/to/example.com/specific/config/to/include` path should be added for the `example.com` domain.
 
 
 #### How to install ImunifyAV
@@ -345,8 +339,6 @@ It should point to an executable file that generates a JSON file similar to the 
   }
 }
 ```
-
-`web_server_config_path` should point to a path that is added as `IncludeOptional` in this domain's virtual host e.g., `/path/to/example.com/specific/config/to/include` path should be added for the `example.com domain`.
 
 
 
