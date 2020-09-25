@@ -11,36 +11,7 @@ This ImunifyAV documentation is applicable for **cPanel** and **DirectAdmin** co
 
 ImunifyAV provides malware scanning features for cPanel and DirectAdmin control panels.
 
-* [Installation Guide](/imunifyav/#installation-guide)
-  * [Requirements](/imunifyav/#requirements)
-  * [Installation Instructions](/imunifyav/#installation-instructions)
-  * [Update Instructions](/imunifyav/#update-instructions)
-  * [Gradual roll-out](/imunifyav/#gradual-roll-out)
-* [Uninstall](/imunifyav/#uninstall)
-  * [How to uninstall ImunifyAV](/imunifyav/#how-to-uninstall-imunifyav)
-  * [How to stop ImunifyAV](/imunifyav/#how-to-stop-imunifyav)
-* [Localization](/imunifyav/#localization)
-  * [How to perform a translation to your own language using our language file](/imunifyav/#how-to-perform-a-translation-to-your-own-language-using-our-language-file)
-* [Hoster Interface](/imunifyav/#hoster-interface)
-  * [Users](/imunifyav/#users)
-  * [Files](/imunifyav/#files)
-  * [Scan](/imunifyav/#scan)
-  * [History](/imunifyav/#history)
-  * [Ignore List](/imunifyav/#ignore-list)
-  * [Features Management (AV+)](/imunifyav/#features-management)
-  * [Reputation Management (AV+)](/imunifyav/#reputation-management)
-  * [Settings](/imunifyav/#settings)
-  * [Upgrade (AV)](/imunifyav/#upgrade)
-* [End User Interface](/imunifyav/#end-user-interface)
-  * [Files](/imunifyav/#files-2)
-  * [History](/imunifyav/#history-2)
-  * [Ignore List](/imunifyav/#ignore-list-2)
-* [Hooks](/imunifyav/#hooks)
-  * [Overview](/imunifyav/#overview)
-  * [How to start using hooks](/imunifyav/#how-to-start-using-hooks)
-  * [Available events and their parameters](/imunifyav/#available-events-and-their-parameters)
-  * [Hooks CLI](/imunifyav/#hooks-cli)
-  * [Structure and examples of a hook script](/imunifyav/#structure-and-examples-of-a-hook-script)
+[[toc]]
 
 ## Installation Guide
 
