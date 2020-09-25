@@ -639,25 +639,6 @@ Tick the _Enable Sentry error reporting_ checkbox to send reports to ImunifyAV e
 |:--:| 
 | *ImunifyAV → Settings → Error reporting* |
 
-#### Notifications <Badge text=Beta /> <Badge text=5.1 />
-
-Starting from version 5.1, ImunifyAV/AV+ provides a completely new Hooks system configuration. Hooks can be configured via the separate UI “Notifications” tab in the Settings, or via the command-line interface (CLI).
-
-![](/images/SettingsNotificationsAV.png)
-
-The administrator can configure to execute custom scripts (“hook handler”). Also, hooks support a new set of events and notification types:
-
-* Events occurring in each type of scan (real-time scan, user account scan, custom folder scan)
-* Events occurring at different stages of malware scanning process: upon scanning start, finish, when malware is found
-
-Each hook can be configured from the UI and the [CLI](/cli/). Each hook type has the enable/disable toggle and event handler script.
-
-:::tip Notes
-* The hook script field accepts a fully qualified path
-* The hook script requires “execution” (+x) permissions to be set to work
-* Email notifications available in Imunify360
-:::
-
 
 ### Upgrade <Badge text="AV" />
 
@@ -1117,5 +1098,24 @@ def im_hook(dict_param):
        raise Exception('Unhandled event {}'.format(event))
 ```
 </div>
+
+### Notifications <Badge text=Beta /> <Badge text=5.1 />
+
+Starting from version 5.1, ImunifyAV/AV+ provides a completely new Hooks system configuration. Hooks can be configured via the separate UI “Notifications” tab in the Settings, or via the command-line interface (CLI).
+
+![](/images/SettingsNotificationsAV.png)
+
+The administrator can configure to execute custom scripts (“hook handler”). Also, hooks support a new set of events and notification types:
+
+* Events occurring in each type of scan (real-time scan, user account scan, custom folder scan)
+* Events occurring at different stages of malware scanning process: upon scanning start, finish, when malware is found
+
+Each hook can be configured from the UI and the [CLI](/cli/). Each hook type has the enable/disable toggle and event handler script.
+
+:::tip Notes
+* The hook script field accepts a fully qualified path
+* The hook script requires “execution” (+x) permissions to be set to work
+* Email notifications available in Imunify360
+:::
 
 
