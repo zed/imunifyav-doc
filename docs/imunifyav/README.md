@@ -45,6 +45,10 @@ ImunifyAV provides malware scanning features for cPanel and DirectAdmin control 
 
 ## Installation Guide
 
+:::tip Note
+[ImunifyAV for **Plesk**](/imunifyav_for_plesk/)
+:::
+
 ### Requirements
 
 **Operating systems**
