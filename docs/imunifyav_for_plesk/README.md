@@ -405,6 +405,26 @@ Open Plesk config file `/usr/local/psa/admin/conf/panel.ini` and add the followi
 filter.priority=7
 ```
 
+* You might also need to enable the Plesk debug mode. You can do so by adding the following lines:
+
+    ```
+    [debug]
+    ; Enable debug mode (do not use in production environment)
+    enabled = on
+    ```
+
+* You might also need to enable logging of utilities calls. You can do so by adding the following lines:
+
+    ```
+    ; Enable logging of external utilities calls
+    show.util_exec = on
+
+    ; Enable logging of stdin and stdout for external utilities calls (do not use in production environment)
+    show.util_exec_io = on
+    ```
+
+    See the Plesk's KB for more information: [https://support.plesk.com/hc/en-us/articles/213408889-How-to-enable-disable-Plesk-debug-mode](https://support.plesk.com/hc/en-us/articles/213408889-How-to-enable-disable-Plesk-debug-mode)
+
 It may look like this:
 
 ![](/images/PleskAVConfig.png)
