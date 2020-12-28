@@ -338,12 +338,15 @@ The table has the following columns:
   * **Cleanup queued<sup>AV+</sup>** — infected file is queued for cleanup.
 Actions:
 * **Add to Ignore List** — add file to the Ignore List and remove it from the Malicious files list. Note that if a file is added to the Ignore List, ImunifyAV will no longer scan this file.
-* **Delete permanently** — remove the file from the server and from the list of Malicious files.
 *  **View file** — click _eye_ icon in the file line and the file content will be displayed in the pop-up. Only the first 100Kb of the file content will be shown in case if a file has bigger size.
 * **Restore original** — restore an initial infected file.
 * **Cleanup file<sup>AV+</sup>** — click _Clean up_ to clean up all infected files within the account.
 
 To perform a bulk action, tick required users and click the corresponding button above the table.
+
+:::danger Warning
+Starting from ImunifyAV(+) v.5.5, the <span class="notranslate">_Delete permanently_</span> option is available only [via CLI](/config_file_description/). It will be removed completely in ImunifyAV(+) v.5.9. For more information see [this blog post](https://blog.imunify360.com/file-quarantine-is-no-longer-effective).
+:::
 
 :::tip Note
 Cleaning up all files of all users is available in the ImunifyAV+. To upgrade to the ImunifyAV+, click **Upgrade to ImunifyAV+**, you will be redirected to [ImunifyAV+ upgrade](/imunifyav/#upgrade) page. Or click _Cleanup all_ button, you will be redirected to the [ImunifyAV+ upgrade](/imunifyav/#upgrade) page.
@@ -442,7 +445,6 @@ The table has the following columns:
   * **Deleted from Ignore List** — the file was removed from the Ignore List. ImunifyAV will scan it.
   * **Deleted** — the file was deleted.
   * **Submitted for analysis** — the file was submitted to the Imunify team for analysis.
-  * **Failed to delete** — there was a problem during removal. Hover mouse over the info icon to read more.
   * **Failed to ignore** — there was a problem during adding to the Ignore List. Hover mouse over the info icon to read more.
   * **Failed to delete from ignore** — there was a problem during removal from the Ignore List. Hover mouse over the info icon to read more.
 
@@ -1100,7 +1102,7 @@ def im_hook(dict_param):
 ```
 </div>
 
-### Notifications <Badge text=Beta /> <Badge text=5.1 />
+### Notifications
 
 Starting from version 5.1, ImunifyAV/AV+ provides a completely new Hooks system configuration. Hooks can be configured via the separate UI “Notifications” tab in the Settings, or via the command-line interface (CLI).
 
