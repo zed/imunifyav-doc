@@ -118,7 +118,7 @@ module.exports = {
             text: "Contact support",
             url: "https://cloudlinux.zendesk.com/hc/requests/new"
           },
-          { text: "Blog", url: "https://blog.imunify360.com" }
+          { text: "Blog", url: "https://blog.imunify360.com/tag/imunifyav" }
         ],
 
         sidebar: [
