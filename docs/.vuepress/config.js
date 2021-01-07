@@ -107,8 +107,8 @@ module.exports = {
 
         bottomLinks: [
           {
-            text: "How to",
-            url: "https://cloudlinux.zendesk.com/hc/sections/115001344329-How-do-I"
+            text: "FAQ",
+            url: "https://cloudlinux.zendesk.com/hc/en-us/articles/360011750114-ImunifyAV-AV-FAQ"
           },
           {
             text: "Getting started",
@@ -118,7 +118,7 @@ module.exports = {
             text: "Contact support",
             url: "https://cloudlinux.zendesk.com/hc/requests/new"
           },
-          { text: "Blog", url: "https://www.imunify360.com/blog" }
+          { text: "Blog", url: "https://blog.imunify360.com" }
         ],
 
         sidebar: [
