@@ -656,13 +656,13 @@ To upgrade, click _Buy Now_ button, you will be redirected to the purchase page.
 The user side is hidden by default and can be enabled by executing the following command:
 
 ```
-/opt/alt/python35/share/imunify360/scripts/av-userside-plugin.sh
+/usr/share/av-userside-plugin.sh
 ```
 
 To disable it back, run:
 
 ```
-/opt/alt/python35/share/imunify360/scripts/av-userside-plugin.sh -r
+/usr/share/av-userside-plugin.sh -r
 ```
 
 Click _ImunifyAV_ in the main menu. There are following tabs in ImunifyAV end user interface:
