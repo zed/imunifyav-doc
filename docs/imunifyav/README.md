@@ -57,6 +57,12 @@ ImunifyAV provides malware scanning features for cPanel and DirectAdmin control 
 * CentOS 8 in [stand-alone mode](/stand_alone_mode/)
 * CloudLinux OS 8 with DirectAdmin
 * CloudLinux OS 8 in [stand-alone mode](/stand_alone_mode/)
+* Debian 9 with Plesk
+* Debian 9 with DirectAdmin
+* Debian 9 as stand-alone
+* Debian 10 with Plesk
+* Debian 10 with DirectAdmin
+* Debian 10 as stand-alone
 
 
 **Virtualization**
@@ -311,6 +317,11 @@ The following filters are available:
 
 The table can be sorted by _User name_ and _Infection status_ (by the date of the last action).
 
+:::tip Note
+Starting from ImunifyAV(+) v. 5.5, all filter and view options are stored in the browser's local storage so you can select filter preference options once and next time you'll open the tab, the options will be preset.
+:::
+
+
 
 ### Files
 
@@ -360,6 +371,10 @@ The following filters are available:
 * **Items per page displayed** — click the number at the table bottom.
 
 The table can be sorted by detection date (detected), user name, file path (file), reason, and status.
+
+:::tip Note
+Starting from ImunifyAV(+) v. 5.5, all filter and view options are stored in the browser's local storage so you can select filter preference options once and next time you'll open the tab, the options will be preset.
+:::
 
 ### Scan
 
@@ -412,6 +427,10 @@ To review and manage suspicious files go to the [Files](/imunifyav/#files) tab.
 
 The table can be sorted by Date, Path, Total files, and Result.
 
+:::tip Note
+Starting from ImunifyAV(+) v. 5.5, all filter and view options are stored in the browser's local storage so you can select filter preference options once and next time you'll open the tab, the options will be preset.
+:::
+
 | <img src="/images/scan_filter.png" alt="Scan Filter" width="186" height="343"/> |
 |:--:| 
 | *Scan table → Filter* |
@@ -450,10 +469,13 @@ The table has the following columns:
 
 The table can be sorted by Date, Path to File, Cause, and Owner.
 
+:::tip Note
+Starting from ImunifyAV(+) v. 5.5, all filter and view options are stored in the browser's local storage so you can select filter preference options once and next time you'll open the tab, the options will be preset.
+:::
+
 ### Ignore List
 
 The _Ignore List_ tab contains the list of files that are excluded from Malware Scanner scanning. Go to ImunifyAV → Ignore List tab. Here, there is a table with a list of files within all domains.
-
 
 | ![](/images/avhosterignorelist_zoom70.png) |
 |:--:| 
@@ -475,6 +497,10 @@ The following filters are available:
 **Path** – displays the results filtered by a path in a direct or reverse alphabetical order.
 
 The table can be sorted by Added and Path. By default, it is sorted from newest to oldest.
+
+:::tip Note
+Starting from ImunifyAV(+) v. 5.5, all filter and view options are stored in the browser's local storage so you can select filter preference options once and next time you'll open the tab, the options will be preset.
+:::
 
 
 ### Features Management <Badge text="AV+"/>
@@ -542,16 +568,12 @@ Click link icon in the _Action_ column to copy the URL to the clipboard.
 Reputation Management online and browser look may differ. This is because Google Safe Browsing has an issue described on github.
 :::
 
+:::tip Note
+Starting from ImunifyAV(+) v. 5.5, all filter and view options are stored in the browser's local storage so you can select filter preference options once and next time you'll open the tab, the options will be preset.
+:::
+
 
 ### Settings
-
-Go to ImunifyAV → Settings tab to set up the behaviour of ImunifyAV scanner. Here you can configure the following:
-Resource consumption
-General
-Background Scanning 
-Malware Cleanup
-Error reporting
-
 
 Go to ImunifyAV → Settings tab to set up the behaviour of ImunifyAV scanner. Here you can configure the following:
 
@@ -642,6 +664,9 @@ Tick the _Enable Sentry error reporting_ checkbox to send reports to ImunifyAV e
 |:--:| 
 | *ImunifyAV → Settings → Error reporting* |
 
+:::tip Note
+Starting from ImunifyAV(+) v. 5.5, all filter and view options are stored in the browser's local storage so you can select filter preference options once and next time you'll open the tab, the options will be preset.
+:::
 
 ### Upgrade <Badge text="AV" />
 
@@ -713,6 +738,10 @@ The following filters are available:
 
 The table can be sorted by detection date (Detected), file path (File), Reason, and Status.
 
+:::tip Note
+Starting from ImunifyAV(+) v. 5.5, all filter and view options are stored in the browser's local storage so you can select filter preference options once and next time you'll open the tab, the options will be preset.
+:::
+
 | ![ImunifyAV+ End User UI → Files tab](/images/av+userfiles_zoom70.png) |
 |:--:| 
 | *ImunifyAV+ End User UI → Files tab* |
@@ -753,7 +782,9 @@ The table has the following columns:
 
 The table can be sorted by Date, Path to File, Cause, and Owner.
 
-The table has the following columns:
+:::tip Note
+Starting from ImunifyAV(+) v. 5.5, all filter and view options are stored in the browser's local storage so you can select filter preference options once and next time you'll open the tab, the options will be preset.
+:::
 
 ### Ignore List
 
@@ -776,6 +807,10 @@ The following filters are available:
 * **Items per page displayed** — click the number at the table bottom.
 
 The table can be sorted by Added and Path. By default, it is sorted from newest to oldest.
+
+:::tip Note
+Starting from ImunifyAV(+) v. 5.5, all filter and view options are stored in the browser's local storage so you can select filter preference options once and next time you'll open the tab, the options will be preset.
+:::
 
 ## Hooks
 
