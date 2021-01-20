@@ -285,9 +285,8 @@ Click _ImunifyAV_ in the main menu. There are following tabs in ImunifyAV hoster
 
 Go to ImunifyAV → Users tab. Here, there is a table with a list of users on the server, except users with root privileges.
 
-| ![ImunifyAV → Users tab](/images/avhosteruserstab_zoom70.png) |
+| ![ImunifyAV → Users tab](/images/AVUsersList.png)| 
 |:--:| 
-| *ImunifyAV → Users tab* |
 
 The table has the following columns:
 
@@ -327,9 +326,8 @@ Starting from ImunifyAV(+) v. 5.5, all filter and view options are stored in the
 
 Go to ImunifyAV → Files tab. Here, there is a table with a list of infected files within all domains and user accounts.
 
-| ![ImunifyAV → Files tab](/images/avhosterfiles_zoom70.png) |
-|:--:| 
-| *ImunifyAV → Files tab* |
+| ![ImunifyAV → Files tab](/images/AVFilesTab.png) |
+|:--:|
 
 The table has the following columns:
 
@@ -394,18 +392,13 @@ If ImunifyAV is running on CloudLinux OS, LVE is used to manage scan intensity. 
 
   2. Click _Start_.
 
-| ![](/images/malware_scanner_4_7.png) |
-|:--:| 
-| *ImunifyAV → Scan tab* |
+| ![](/images/AVMalwareScanner.png) |
+|:--:|
 
 At the top right corner scanning progress and status are displayed:
 
 * **Scanner is stopped** means that there is no scanning process running.
 * **Scanning…%** means that the scanner is working at the moment. A percentage displays the scanning progress. You can also see the scanning status beneath the _Mask_ or _Advanced_ options.
-
-| <img src="/images/imunifyscan.png" alt="Imunify Scan" width="670" height="293"/> |
-|:--:| 
-| *ImunifyAV → Scan tab* |
 
 When scanning is completed, the results are shown in the table below with the following information:
 
@@ -417,8 +410,7 @@ When scanning is completed, the results are shown in the table below with the fo
   * **View report** — click _View Report_ icon to go to the _Files_ tab and display the results of the last scan.
 
 | ![](/images/hosterscantable_zoom70.png) |
-|:--:| 
-| *ImunifyAV → Scan table* |
+|:--:|
 
 The following filters are available:
 
@@ -432,8 +424,7 @@ Starting from ImunifyAV(+) v. 5.5, all filter and view options are stored in the
 :::
 
 | <img src="/images/scan_filter.png" alt="Scan Filter" width="186" height="343"/> |
-|:--:| 
-| *Scan table → Filter* |
+|:--:|
 
 
 ### History
@@ -441,8 +432,7 @@ Starting from ImunifyAV(+) v. 5.5, all filter and view options are stored in the
 The _History_ tab contains data of all actions for all files. Go to ImunifyAV → History tab. Here, there is a table with a list of files within all domains.
 
 | ![](/images/avhosterhistory_zoom70.png) |
-|:--:| 
-| *ImunifyAV → History tab* |
+|:--:|
 
 The table has the following columns:
 
@@ -477,10 +467,8 @@ Starting from ImunifyAV(+) v. 5.5, all filter and view options are stored in the
 
 The _Ignore List_ tab contains the list of files that are excluded from Malware Scanner scanning. Go to ImunifyAV → Ignore List tab. Here, there is a table with a list of files within all domains.
 
-| ![](/images/avhosterignorelist_zoom70.png) |
+| ![](/images/AVIgnoreList.png) |
 |:--:| 
-| *ImunifyAV → Ignore list tab* |
-
 The table has the following columns:
 
 * **Added** — the date when the file was added to the Ignore list.
@@ -507,9 +495,8 @@ Starting from ImunifyAV(+) v. 5.5, all filter and view options are stored in the
 
 Features Management tab allows to enable or disable ImunifyAV features for each customer. Go to ImunifyAV → Features Management tab.
 
-| ![](/images/avhosterfeaturesmanagement_zoom70.png) |
-|:--:| 
-| *ImunifyAV → Features Management tab* |
+| ![](/images/AVFeaturesManagement.png) |
+|:--:|
 
 To enable Malware Cleanup feature for new users by default, move the _Malware Cleanup_ slider.
 
@@ -553,16 +540,15 @@ At the top of the page (also in the main menu near Reputation Management item), 
 The table shows:
 
 * _ID_ – domain owner username
-* _URL_ – the affected domain link
-* _Type_ – read more about types [on the link](https://developers.google.com/safe-browsing/v4/reference/rest/v4/ThreatType) (we still do not support THREAT_TYPE_UNSPECIFIED and POTENTIALLY_HARMFUL_APPLICATION).
-* _Detection time_ – exact time when the Reputation Management has detected the domain
+* _Domain_ – the affected domain link
+* _Threat type_ – read more about types [on the link](https://developers.google.com/safe-browsing/v4/reference/rest/v4/ThreatType) (we still do not support THREAT_TYPE_UNSPECIFIED and POTENTIALLY_HARMFUL_APPLICATION)
+* _Vendor_ – where the threat was detected
+* _Detection time_ – exact time when the Reputation Management detected the domain
+* _Action_ – a link to the actions guide
 
-| ![](/images/reputation.png) |
+| ![](/images/AVReputationManagement1.png) |
 |:--:| 
-| *ImunifyAV → Reputation Management* |
 
-
-Click link icon in the _Action_ column to copy the URL to the clipboard.
 
 ::: tip Note
 Reputation Management online and browser look may differ. This is because Google Safe Browsing has an issue described on github.
@@ -587,9 +573,8 @@ Go to ImunifyAV → Settings tab to set up the behaviour of ImunifyAV scanner. H
 
 #### Resource consumption
 
-| ![ImunifyAV → Settings → Resource consumption](/images/ResourceConsumption.png) |
+| ![ImunifyAV → Settings → Resource consumption](/images/AVSettingsResourceConsumption.png) |
 |:--:| 
-| *ImunifyAV → Settings → Resource consumption* |
 
 * **CPU consumption** – enables to set a level of CPU usage by Malware Scanner.
   
@@ -609,9 +594,8 @@ Go to ImunifyAV → Settings tab to set up the behaviour of ImunifyAV scanner. H
 
 #### General
 
-| ![ImunifyAV → Settings → General](/images/SettingsGeneral.png) |
-|:--:| 
-| *ImunifyAV → Settings → General* |
+| ![ImunifyAV → Settings → General](/images/AVSettingsGeneral.png) |
+|:--:|
 
 * **Automatically send suspicious and malicious files for analysis** – malicious and suspicious files will be sent to the ImunifyAV Team for analysis automatically.
 * **RapidScan** – dramatically speeds up repeated scans based on smart re-scan approach, local result caching and cloud-assisted scan. When you first enable the RapidScan feature, the first scan will run as before. But subsequent scans will see a dramatic speed improvement, anywhere between 5 to 20 times faster. You can find the details here: [https://docs.imunify360.com/features/#rapidscan](https://docs.imunify360.com/features/#rapidscan))
@@ -633,13 +617,8 @@ Allows to set up automatic, scheduled, background scanning of user accounts.
 The `Daily` and `Weekly` options are available for ImunifyAV+ and Imunify360 only.
 :::
 
-| <img src="/images/SettingsBackgroundScanning1.png" alt="SettingsBackgroundScanning1" width="512" height="176"/> |
+| ![ImunifyAV → Settings → Background Scanning](/images/AVBackgroundScanning.png) |
 |:--:| 
-| *ImunifyAV → Settings → Background Scanning* |
-
-| ![ImunifyAV → Settings → Background Scanning](/images/SettingsBackgroundScanning2.png) |
-|:--:| 
-| *ImunifyAV → Settings → Background Scanning* |
 
 Depending on the selected period, precise settings.
 
@@ -652,17 +631,15 @@ Depending on the selected period, precise settings.
 * **Trim file instead of removal** — do not remove infected file during cleanup but make the file zero-size (for malwares like web-shells);
 * **Keep original files for … days** — the original infected file is available for restore within the defined period. Default is 14 days.
 
-| <img src="/images/MalwareCleanup.png" alt="Malware Cleanup" width="556" height="203"/> |
+| ![](/images/AVSettingsCleanup.png)|
 |:--:| 
-| *ImunifyAV → Settings → Malware Cleanup* |
 
 #### Error reporting
 
 Tick the _Enable Sentry error reporting_ checkbox to send reports to ImunifyAV error reports server.
 
-| <img src="/images/ErrorReporting.png" alt="Error Reporting" width="445" height="150"/> |
+| ![](/images/AVSettingsErrorReporting.png) |
 |:--:| 
-| *ImunifyAV → Settings → Error reporting* |
 
 :::tip Note
 Starting from ImunifyAV(+) v. 5.5, all filter and view options are stored in the browser's local storage so you can select filter preference options once and next time you'll open the tab, the options will be preset.
@@ -700,13 +677,12 @@ Click _ImunifyAV_ in the main menu. There are following tabs in ImunifyAV end us
 
 Go to ImunifyAV → Files tab. Here, there is a table with a list of infected files.
 
-| ![ImunifyAV Hoster UI → Files tab](/images/avuserfiles_zoom70.png) |
+| ![ImunifyAV Hoster UI → Files tab](/images/AVUIFiles.png) |
 |:--:| 
-| *ImunifyAV Hoster UI → Files tab* |
 
 The table has the following columns:
 
-* **Detected** — displays the exact time when a file was detected as malicious
+* **Scan date** — displays the exact time when a file was detected as malicious
 * **File** — the path where the file is located starting with root
 * **Reason** — describes the signature which was detected during the scanning process. Names in this column depend on the signature vendor. You can derive some information from the signature ID itself. `SMW-SA-05155-wshll` – in this Signature ID:
 	* The first section can be either `SMW` or `CMW`. `SMW` stands for Server Malware and `CMW` stands for Client Malware
@@ -719,12 +695,12 @@ The table has the following columns:
   * **Cleaned** — infected file is cleaned up
   * **Content removed** — a file content was removed after cleanup
   * **Cleanup queued<sup> AV+</sup>** — infected file is queued for cleanup.
-Actions:
-* **Add to Ignore List** — add file to Ignore List and remove it from the Malicious files list. Note that if a file is added to Ignore List, ImunifyAV will no longer scan this file
-* **View file** — click _eye_ icon in the file line and the file content will be displayed in the popup. Only the first 100Kb of the file content will be shown in case if a file has bigger size
-* **Cleanup<sup> AV+</sup>** — click to cleanup the file.
-* **Delete<sup> AV+</sup>** — remove the file from the server and from the list of Malicious files.
-* **Restore original<sup> AV+</sup>** — click _Restore original_ to restore original file after cleaning up if backup is available.
+* **Actions**:
+  * **Add to Ignore List** — add file to Ignore List and remove it from the Malicious files list. Note that if a file is added to Ignore List, ImunifyAV will no longer scan this file
+  * **View file** — click _eye_ icon in the file line and the file content will be displayed in the popup. Only the first 100Kb of the file content will be shown in case if a file has bigger size
+  * **Cleanup<sup> AV+</sup>** — click to cleanup the file.
+  * **Delete<sup> AV+</sup>** — remove the file from the server and from the list of Malicious files.
+  * **Restore original<sup> AV+</sup>** — click _Restore original_ to restore original file after cleaning up if backup is available.
 
 To perform a bulk action, tick required users and click the corresponding button above the table.
 
@@ -741,10 +717,6 @@ The table can be sorted by detection date (Detected), file path (File), Reason, 
 :::tip Note
 Starting from ImunifyAV(+) v. 5.5, all filter and view options are stored in the browser's local storage so you can select filter preference options once and next time you'll open the tab, the options will be preset.
 :::
-
-| ![ImunifyAV+ End User UI → Files tab](/images/av+userfiles_zoom70.png) |
-|:--:| 
-| *ImunifyAV+ End User UI → Files tab* |
 
 If a user is allowed by an administrator to scan his files, he can see the *Start scanning* button. See also: [How to enable/disable the "Start scanning" button for ImunifyAV\AV+](/faq_and_known_issues/#how-to-enable-disable-the-start-scanning-button-for-imunifyav-av).
 
