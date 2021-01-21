@@ -24,6 +24,8 @@ In the config file it is possible to set up ImunifyAV(+) configuration. The foll
 <td># speed up scans by check file hashes using cloud database</td></tr>
 <tr><td><span class="notranslate">rapid_scan: True</span></td>
 <td># speeds up (<span class="notranslate">True</span>) (default value) ot not (<span class="notranslate">False</span>) repeated scans based on smart re-scan approach, local result caching and cloud-assisted scan.</td></tr>
+<tr><td><span class="notranslate">rapid_scan_rescan_unchanging_files_frequency: null</span></td>
+<td># defines what part of all files will be rescanned during each scan. For example, if set 10 then 1/10 part of all files will be rescanned. The default value `null` - means "choose frequency based on scan schedule". E.g. month - 1, week - 5, day - 10.</td></tr>
 <th colspan="2" align="left"><span class="notranslate">ERROR_REPORTING:</span></th></tr>
 <tr><td><span class="notranslate">enable: True</span></td>
 <td># automatically report errors to the Imunify team</td></tr>

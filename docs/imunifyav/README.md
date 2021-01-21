@@ -59,10 +59,10 @@ ImunifyAV provides malware scanning features for cPanel and DirectAdmin control 
 * CloudLinux OS 8 in [stand-alone mode](/stand_alone_mode/)
 * Debian 9 with Plesk
 * Debian 9 with DirectAdmin
-* Debian 9 as stand-alone
+* Debian 9 as [stand-alone mode](/stand_alone_mode/)
 * Debian 10 with Plesk
 * Debian 10 with DirectAdmin
-* Debian 10 as stand-alone
+* Debian 10 as [stand-alone mode](/stand_alone_mode/)
 
 
 **Virtualization**
