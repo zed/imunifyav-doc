@@ -268,7 +268,11 @@ succeeded:
 - user1
 ```
 
-## Hooks
+## Hooks <Badge text="Deprecated" type="warning"/>
+
+:::danger Warning!
+You can use a new notification system via [CLI](/cli/#notifications-config).
+:::
 
 You can read more about hooks [here](/imunifyav/#hooks-cli).
 
@@ -555,35 +559,281 @@ The successful initiation/stopping of a scanning process or adding of ignore dir
 
 ## Notifications config
 
-Allows to update notifications in the configuration file via CLI.
+Allows administrators to execute custom scripts on events execution.
 
 
 **Usage:**
 
 ```
-imunify-antivirus notifications-config update [configuration options]
+imunify-antivirus notifications-config [command] [configuration options]
 ```
 
-**Examples:**
 
-Enable hook on the CUSTOM_SCAN_STRTED event:
+<span class="notranslate">`command`</span> can be:
+
+| | |
+|-|-|
+|<span class="notranslate">`show`</span>|returns the full config as a JSON|
+|<span class="notranslate">`update`</span>|updates the config (partial update is supported) and returns the full updated config as a JSON|
+
+We advise administrators to use the <span class="notranslate">`notifications-config show`</span> to get the full config, pick what they want to edit, and feed it to the <span class="notranslate">`notifications-config update`</span>.
+
+The general structure of the <span class="notranslate">`imunify-antivirus notifications-config show`</span> command output:
+
+<div class="notranslate">
+
+```json
+{
+   "rules": {
+      "USER_SCAN_FINISHED": {
+         "SCRIPT": {
+            "scripts": [],
+            "enabled": False
+         }
+      },
+      "USER_SCAN_MALWARE_FOUND": {
+         "SCRIPT": {
+            "scripts": [],
+            "enabled": False
+         },
+         "ADMIN": {
+         "admin_emails": [],
+         "enabled": False
+         }
+      },
+      "USER_SCAN_STARTED": {
+         "SCRIPT": {
+            "scripts": [],
+            "enabled": False
+         }
+      },
+      "CUSTOM_SCAN_STARTED": {
+         "SCRIPT": {
+            "scripts": [],
+            "enabled": False
+         }
+      },
+      "CUSTOM_SCAN_FINISHED": {
+         "SCRIPT": {
+            "scripts": [],
+            "enabled": False
+         }
+      },
+      "CUSTOM_SCAN_MALWARE_FOUND": {
+         "SCRIPT": {
+            "scripts": [],
+            "enabled": False
+         },
+         "ADMIN": {
+            "admin_emails": [],
+            "enabled": False
+         }
+      }
+   },
+   "admin": {
+      "notify_from_email": None,
+      "default_emails": []
+   }
+}
+```
+
+</div>
+
+Let's review all the options.
+
+Rules:
+
+* <span class="notranslate">USER_SCAN_FINISHED</span> – occurs immediately after the user scanning has finished, regardless the malware has found or not.
+* <span class="notranslate">USER_SCAN_MALWARE_FOUND</span> – occurs when the malware scanning process of a user account has finished and malware found.
+* <span class="notranslate">USER_SCAN_STARTED</span> – occurs immediately after the user scanning has started.
+* <span class="notranslate">CUSTOM_SCAN_STARTED</span> – occurs immediately after on-demand (manual) scanning has started.
+* <span class="notranslate">CUSTOM_SCAN_FINISHED</span> – occurs immediately after on-demand (manual) scanning has finished, regardless the malware has found or not.
+* <span class="notranslate">CUSTOM_SCAN_MALWARE_FOUND</span> – occurs when the on-demand scanning process has finished and malware found.
+
+
+Admin:
+
+* <span class="notranslate">default_emails</span> – specify the default list of emails used for all enabled admin email notifications.
+* <span class="notranslate">notify_from_email</span> – specify a sender of all emails sent by the Hooks.
+
+**Examples**:
+
+1. Update admin default emails:
+
+<div class="notranslate">
 
 ```
-# imunify-antivirus notifications-config update '{"rules": {"CUSTOM_SCAN_STARTED": {"SCRIPT": {"enabled": true, "scripts": ["/bin/hook"]}}}}'
+imunify-antivirus notifications-config update '{"admin": {"default_emails": ["email1@email.com", "email2@email.com"]}}'
+```
+</div>
+
+After the successful execution, the <span class="notranslate">`imunify-antivirus notifications-config update`</span> command returns the full config with changes. 
+
+The <span class="notranslate">`imunify-antivirus notifications-config show`</span> command output after applying the example 1:
+
+<div class="notranslate">
+
+```json
+{
+   "rules": {
+      "USER_SCAN_FINISHED": {
+         "SCRIPT": {
+            "scripts": [],
+            "enabled": False
+         }
+      }, 
+      "USER_SCAN_MALWARE_FOUND": {
+         "ADMIN": {
+            "admin_emails": [],
+            "enabled": False
+         },
+         "SCRIPT": {
+            "scripts": [],
+            "enabled": False
+         }
+      },
+      "CUSTOM_SCAN_STARTED": {
+         "SCRIPT": {
+            "scripts": [],
+            "enabled": False
+         }
+      },
+      "USER_SCAN_STARTED": {
+         "SCRIPT": {
+            "scripts": [],
+            "enabled": False
+         }
+      },
+      "CUSTOM_SCAN_FINISHED": {
+         "SCRIPT": {
+            "scripts": [],
+            "enabled": False
+         }
+      },
+      "CUSTOM_SCAN_MALWARE_FOUND": {
+         "ADMIN": {
+            "admin_emails": [],
+            "enabled": False
+         },
+         "SCRIPT": {
+            "scripts": [],
+            "enabled": False
+         }
+      }
+   },
+   "admin": {
+      "notify_from_email": None,
+      "default_emails": ['email1@email.com', 'email2@email.com']
+   }
+}
 ```
 
-Change period for SCRIPT hook for REALTIME_MALWARE_FOUND event to 1 minute:
+</div>
+
+**More examples**:
+
+2. Run the custom script on the <span class="notranslate">USER_SCAN_FINISHED</span> event occurrence:
+
+<div class="notranslate">
 
 ```
-# imunify360-antivirus notifications-config update '{"rules": {"REALTIME_MALWARE_FOUND": {"/scripts/suspend-website.py": {"period": 60}}}}'
+imunify-antivirus notifications-config update '{"rules": {"USER_SCAN_FINISHED": {"SCRIPT": {"scripts": ["/script/my-handler.py"], "enabled": true}}}}'
+```
+</div>
+
+
+After the successful execution, the <span class="notranslate">`imunify-antivirus notifications-config update`</span> command returns the full config with changes. 
+
+The <span class="notranslate">`imunify-antivirus notifications-config show`</span> command output after applying the example 2:
+
+<div class="notranslate">
+
+```json
+{
+   "rules": {
+      "CUSTOM_SCAN_MALWARE_FOUND": {
+         "SCRIPT": {
+            "scripts": [],
+            "enabled": False
+         },
+         "ADMIN": {
+            "enabled": False,
+            "admin_emails": []
+         }
+      },
+      "USER_SCAN_STARTED": {
+         "SCRIPT": {
+            "scripts": [],
+            "enabled": False
+         }
+      },
+      "CUSTOM_SCAN_FINISHED": {
+         "SCRIPT": {
+            "scripts": [],
+            "enabled": False
+         }
+      },
+      "CUSTOM_SCAN_STARTED": {
+         "SCRIPT": {
+            "scripts": [],
+            "enabled": False
+         }
+      },
+      "USER_SCAN_MALWARE_FOUND": {
+         "SCRIPT": {
+            "scripts": [],
+            "enabled": False
+         },
+         "ADMIN": {
+            "enabled": False,
+            "admin_emails": []
+         }
+      },
+      "USER_SCAN_FINISHED": {
+         "SCRIPT": {
+            "scripts": ['/script/my-handler.py'],
+            "enabled": True
+         }
+      }
+   },
+   "admin": {
+      "notify_from_email": None,
+      "default_emails": ['email1@email.com', 'email2@email.com']
+   }
+}
 ```
 
-:::tip Notes
-* The hook script field accepts a fully qualified path
-* The hook script requires “execution” (+x) permissions to be set to work
-* Email notifications available in Imunify360
+</div>
+
+#### Example of script to create custom scripts to use with notifications-config
+
+There are two script examples you can download:
+
+* [Shell script](/hook_script.sh)
+* [Python script](/hook_script.py)
+
+You can use these scripts as a reference and customize them.
+
+:::warning Note
+Set the `+x` bits to your script file to make it executable. Your script also has to be readable by the special <span class="notranslate">`_imunify`</span> user, so make sure of setting group's permission accordingly:
+
+<div class="notranslate">
+
+```
+chown root:_imunify hook_script.sh
+```
+</div>
 :::
 
+#### Python script description
+
+The agent generates messages of different types on hook events. The ‘if chain’ in the script calls the particular method corresponding to type of the event that came from the agent.
+
+To unblock user sites which were scanned as clean, you can use the `handle_user_scan_finished` method.
+
+Add your path to the related hook (or multiple hooks) and implement the custom logic of blocking and unblocking sites.
+
+Also in this script you could find the way to parse JSON that come from ImunifyAV(+) and description of this JSON schema in every possible case. Such descriptions are provided by docstring of the <span class="notranslate">`handle`</span> methods.
 
 ## Register
 

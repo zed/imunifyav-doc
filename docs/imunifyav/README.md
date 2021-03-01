@@ -784,7 +784,11 @@ The table can be sorted by Added and Path. By default, it is sorted from newest 
 Starting from ImunifyAV(+) v. 5.5, all filter and view options are stored in the browser's local storage so you can select filter preference options once and next time you'll open the tab, the options will be preset.
 :::
 
-## Hooks
+## Hooks <Badge text="Deprecated" type="warning"/>
+
+:::danger Warning!
+You can use a new notification system via [CLI](/cli/#notifications-config).
+:::
 
 ### Overview
 

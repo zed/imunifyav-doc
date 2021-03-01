@@ -1,4 +1,4 @@
-# Stand-alone version of ImunifyAV+
+# Stand-alone version of ImunifyAV+ ()
 
 Below you can find the steps to install and run ImunifyAV, in stand-alone mode, or within any hosting panel.
 
