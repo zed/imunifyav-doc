@@ -929,7 +929,7 @@ This command allows updating ImunifyAV malware signatures.
 **Usage:**
 
 ```
-imunify-antivirus update [--optional arguments] signatures
+imunify-antivirus update sign
 OK
 ```
 
