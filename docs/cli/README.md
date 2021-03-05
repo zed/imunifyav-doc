@@ -59,6 +59,7 @@ The following options are available for all commands.
 |[`register`](/cli/#register)|register the agent|
 |[`rstatus`](/cli/#rstatus)|send a query to server to the check if the license is valid|
 |[`start`](/cli/#start)|start the agent|
+|[`submit false-positive/false-negative`](/cli/#submit-false-positive-false-negative)|allows to submit a file as false positive/false negative|
 |[`unregister`](/cli/#unregister)|unregister the agent|
 |[`update`](/cli/#update)|update malware signatures|
 |[`update-license`](/cli/#update-license)|force license update|
@@ -908,6 +909,36 @@ imunify-antivirus rstatus --json -v
   "version": "5.1.2-1"
 }
 ```
+
+## Submit false-positive/false-negative
+
+To submit file as false positive for analysis (if ImunifyAV considers file as a malicious but it actually isn't), you can use the following command (please make sure to specify the file name along with full path):
+
+<div class="notranslate">
+
+```
+imunify-antivirus submit false-positive <file>
+```
+
+</div>
+
+To submit file as false negative for analysis (if ImunifyAV considers file as a non-malicious but it actually does), you can use the following command (please make sure to specify the file name along with full path):
+
+<div class="notranslate">
+
+```
+imunify-antivirus submit false-negative <file>
+```
+
+</div>
+ 
+Optional arguments:
+
+| | |
+|-|-|
+|<span class="notranslate">`-h`, `--help`</span>|show this help message and exit|
+
+
 
 
 ## Unregister
