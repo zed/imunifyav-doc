@@ -101,7 +101,7 @@ module.exports = {
           }
         },
         algolia: {
-          apiKey: '1ee8ee1bcded0cdcc07ffb4bc8c51d95',
+          apiKey: '29339fdc91169afd5a7dd2a0a9bba6d2',
           indexName: 'imunifyav'
         },
 
@@ -149,7 +149,7 @@ module.exports = {
           }
         },
         algolia: {
-          apiKey: '1ee8ee1bcded0cdcc07ffb4bc8c51d95',
+          apiKey: '29339fdc91169afd5a7dd2a0a9bba6d2',
           indexName: 'imunifyav'
         },
         sidebar: [
