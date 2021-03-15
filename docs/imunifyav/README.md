@@ -49,24 +49,10 @@ ImunifyAV provides malware scanning features for cPanel and DirectAdmin control 
 
 **Operating systems**
 
-* CentOS/RHEL 6 and 7
-* CloudLinux OS 6 and 7
-* Ubuntu 16.04 (LTS only) and 18.04 in [stand-alone mode](/stand_alone_mode/)
-* CentOS 8 with [Plesk](/imunifyav_for_plesk/)
-* CentOS 8 with DirectAdmin
-* CentOS 8 in [stand-alone mode](/stand_alone_mode/)
-* CloudLinux OS 8 with DirectAdmin
-* CloudLinux OS 8 in [stand-alone mode](/stand_alone_mode/)
-* Debian 9 with Plesk
-* Debian 9 with DirectAdmin
-* Debian 9 as [stand-alone mode](/stand_alone_mode/)
-* Debian 10 with Plesk
-* Debian 10 with DirectAdmin
-* Debian 10 as [stand-alone mode](/stand_alone_mode/)
-* Ubuntu 20 with Plesk
-* Ubuntu 20 with DirectAdmin
-* Ubuntu 20 as [stand-alone](/stand_alone_mode/)
-
+* CentOS/RHEL 6,7,8
+* CloudLinux OS 6,7,8
+* Ubuntu 16.04 (LTS only), 18.04 and 20.04
+* Debian 9 and 10
 
 **Virtualization**
 
@@ -80,7 +66,7 @@ ImunifyAV provides malware scanning features for cPanel and DirectAdmin control 
 **Supported hosting panels**
 
 * cPanel
-* DirectAdmin (Ubuntu support is coming soon)
+* DirectAdmin
 * [No hosting panel systems](/stand_alone_mode/)
 
 **Required browsers**
@@ -158,14 +144,14 @@ To update ImunifyAV beta version run the command:
 yum update imunify-antivirus --enablerepo=imunify360-testing
 ```
 
-To update ImunifyAV on Ubuntu run the command:
+To update ImunifyAV on Ubuntu/Debian run the command:
 
 ```
 apt-get update
 apt-get install --only-upgrade imunify-antivirus
 ```
 
-To update ImunifyAV beta on Ubuntu 16.04 LTS run the command:
+To update ImunifyAV **beta** on Ubuntu 16.04 LTS run the command:
 
 ```
 echo 'deb https://repo.imunify360.cloudlinux.com/imunify360/ubuntu-testing/16.04/ xenial main'  > /etc/apt/sources.list.d/imunify360-testing.list
@@ -173,10 +159,18 @@ apt-get update
 apt-get install --only-upgrade imunify-antivirus
 ```
 
-To update ImunifyAV beta on Ubuntu 18.04 run the command:
+To update ImunifyAV **beta** on Ubuntu 18.04 run the command:
 
 ```
 echo 'deb https://repo.imunify360.cloudlinux.com/imunify360/ubuntu-testing/18.04/ bionic main'  > /etc/apt/sources.list.d/imunify360-testing.list
+apt-get update
+apt-get install --only-upgrade imunify-antivirus
+```
+
+To update ImunifyAV **beta** on Debian run the command:
+
+```
+echo 'deb https://repo.imunify360.cloudlinux.com/imunify360/debian-testing/10/ buster main'  > /etc/apt/sources.list.d/imunify360-testing.list
 apt-get update
 apt-get install --only-upgrade imunify-antivirus
 ```
