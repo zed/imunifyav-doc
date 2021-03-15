@@ -63,6 +63,9 @@ ImunifyAV provides malware scanning features for cPanel and DirectAdmin control 
 * Debian 10 with Plesk
 * Debian 10 with DirectAdmin
 * Debian 10 as [stand-alone mode](/stand_alone_mode/)
+* Ubuntu 20 with Plesk
+* Ubuntu 20 with DirectAdmin
+* Ubuntu 20 as [stand-alone](/stand_alone_mode/)
 
 
 **Virtualization**
@@ -354,7 +357,7 @@ Actions:
 To perform a bulk action, tick required users and click the corresponding button above the table.
 
 :::danger Warning
-Starting from ImunifyAV(+) v.5.5, the <span class="notranslate">_Delete permanently_</span> option is available only [via CLI](/config_file_description/). It will be removed completely in ImunifyAV(+) v.5.9. For more information see [this blog post](https://blog.imunify360.com/file-quarantine-is-no-longer-effective).
+Starting from ImunifyAV(+) v.5.5, the _Delete permanently_ option is not available. Restoration from the Quarantine is available until the “Quarantine” Default Action is completely removed from the product (v.5.8, April 2021). You can still manage files in the quarantine if they were quarantined earlier. For more information see this [this blog post](https://blog.imunify360.com/file-quarantine-is-no-longer-effective).
 :::
 
 :::tip Note
