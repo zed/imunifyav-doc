@@ -102,7 +102,7 @@ module.exports = {
         },
         algolia: {
           apiKey: 'd51f82b31c286ce013015a4c00329efc',
-          indexName: 'imunifyav'
+          indexName: 'imunifyavp'
         },
 
         bottomLinks: [
