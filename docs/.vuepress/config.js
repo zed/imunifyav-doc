@@ -101,7 +101,7 @@ module.exports = {
           }
         },
         algolia: {
-          apiKey: '29339fdc91169afd5a7dd2a0a9bba6d2',
+          apiKey: 'd51f82b31c286ce013015a4c00329efc',
           indexName: 'imunifyav'
         },
 
