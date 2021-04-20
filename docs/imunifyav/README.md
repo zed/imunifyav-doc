@@ -90,7 +90,7 @@ To install ImunifyAV proceed the following steps:
 2. Go to your home directory and run the commands:
 
 ```
-wget https://repo.imunify360.cloudlinux.com/defence360/imav-deploy.sh
+wget https://repo.imunify360.cloudlinux.com/defence360/imav-deploy.sh -O imav-deploy.sh
 bash imav-deploy.sh
 ```
 
@@ -103,7 +103,7 @@ bash imav-deploy.sh --beta
 If you already have **ImunifyAV+** license key you can use it during installation:
 
 ```
-wget https://repo.imunify360.cloudlinux.com/defence360/imav-deploy.sh
+wget https://repo.imunify360.cloudlinux.com/defence360/imav-deploy.sh -O imav-deploy.sh
 bash imav-deploy.sh --key YOUR_KEY
 ```
  
@@ -112,7 +112,7 @@ where `YOUR_KEY` is your license key. Replace `YOUR_KEY` with the actual key pur
 If you have an IP-based license for **ImunifyAV+**, use IPL as license key:
 
 ```
-wget https://repo.imunify360.cloudlinux.com/defence360/imav-deploy.sh
+wget https://repo.imunify360.cloudlinux.com/defence360/imav-deploy.sh -O imav-deploy.sh
 bash imav-deploy.sh --key IPL
 ```
 
@@ -191,7 +191,7 @@ If you do not want to wait for the gradual roll-out, you can update ImunifyAV to
 <div class="notranslate">
 
 ```
-wget https://repo.imunify360.cloudlinux.com/defence360/imunify-force-update.sh
+wget https://repo.imunify360.cloudlinux.com/defence360/imunify-force-update.sh -O imunify-force-update.sh
 bash imunify-force-update.sh
 ```
 </div>
